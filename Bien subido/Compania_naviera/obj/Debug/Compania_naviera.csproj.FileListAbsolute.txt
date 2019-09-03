@@ -1,0 +1,12 @@
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\bin\Debug\Compania_naviera.exe.config
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\bin\Debug\Compania_naviera.exe
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\bin\Debug\Compania_naviera.pdb
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.csprojAssemblyReference.cache
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.frm_principal.resources
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.login.resources
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.Properties.Resources.resources
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.csproj.GenerateResource.cache
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.exe
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.pdb
+C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.navios.resources
