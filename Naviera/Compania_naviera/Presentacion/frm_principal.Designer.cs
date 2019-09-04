@@ -37,6 +37,7 @@
             this.itinerariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viajesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +46,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sistemaToolStripMenuItem,
             this.organizacionToolStripMenuItem,
-            this.viajesToolStripMenuItem});
+            this.viajesToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -93,13 +95,13 @@
             // itinerariosToolStripMenuItem
             // 
             this.itinerariosToolStripMenuItem.Name = "itinerariosToolStripMenuItem";
-            this.itinerariosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.itinerariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.itinerariosToolStripMenuItem.Text = "Viaje";
             // 
             // puertosToolStripMenuItem
             // 
             this.puertosToolStripMenuItem.Name = "puertosToolStripMenuItem";
-            this.puertosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.puertosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.puertosToolStripMenuItem.Text = "Seguimiento Viaje";
             // 
             // viajesToolStripMenuItem
@@ -107,6 +109,13 @@
             this.viajesToolStripMenuItem.Name = "viajesToolStripMenuItem";
             this.viajesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.viajesToolStripMenuItem.Text = "Informes";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
             // frm_principal
             // 
@@ -138,5 +147,6 @@
         private System.Windows.Forms.ToolStripMenuItem puertosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viajesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tripulacionToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

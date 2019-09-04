@@ -23,3 +23,5 @@ C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_nav
 C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.exe
 C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.pdb
 C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.registro_navios.resources
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.itinerarios.resources
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.registro_itinerarios.resources

@@ -77,19 +77,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(26, 97);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(644, 210);
             this.dataGridView1.TabIndex = 1;
             // 
             // btn_consultar
             // 
-            this.btn_consultar.Location = new System.Drawing.Point(544, 19);
+            this.btn_consultar.BackgroundImage = global::Compania_naviera.Properties.Resources.boton_buscar;
+            this.btn_consultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_consultar.Location = new System.Drawing.Point(576, 11);
             this.btn_consultar.Name = "btn_consultar";
-            this.btn_consultar.Size = new System.Drawing.Size(81, 23);
+            this.btn_consultar.Size = new System.Drawing.Size(51, 47);
             this.btn_consultar.TabIndex = 4;
-            this.btn_consultar.Text = "Consultar";
             this.btn_consultar.UseVisualStyleBackColor = true;
             // 
             // btn_modificar
