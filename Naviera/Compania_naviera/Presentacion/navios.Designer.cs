@@ -29,261 +29,133 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txt_codigo = new System.Windows.Forms.TextBox();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.txt_altura = new System.Windows.Forms.TextBox();
-            this.txt_autonomia = new System.Windows.Forms.TextBox();
-            this.txt_desplazamiento = new System.Windows.Forms.TextBox();
-            this.txt_eslora = new System.Windows.Forms.TextBox();
-            this.txt_manga = new System.Windows.Forms.TextBox();
-            this.txt_cantiada_pasajeros = new System.Windows.Forms.TextBox();
-            this.txt_cantidad_tripulantes = new System.Windows.Forms.TextBox();
-            this.txt_cantidad_motores = new System.Windows.Forms.TextBox();
-            this.cmb_tipo = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_registrar = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_consultar = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.btn_salir = new System.Windows.Forms.Button();
+            this.Busqueda = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Busqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 25);
+            this.label1.Location = new System.Drawing.Point(15, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo navio:";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(93, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(352, 21);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 3;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 49);
+            this.label2.Location = new System.Drawing.Point(271, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombre: ";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tipo de navio:";
             // 
-            // label3
+            // dataGridView1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Altura: ";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(26, 97);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(644, 210);
+            this.dataGridView1.TabIndex = 1;
             // 
-            // label4
+            // btn_consultar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Autonomia:";
+            this.btn_consultar.Location = new System.Drawing.Point(544, 19);
+            this.btn_consultar.Name = "btn_consultar";
+            this.btn_consultar.Size = new System.Drawing.Size(81, 23);
+            this.btn_consultar.TabIndex = 4;
+            this.btn_consultar.Text = "Consultar";
+            this.btn_consultar.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // btn_modificar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 129);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Desplazamiento: ";
+            this.btn_modificar.BackgroundImage = global::Compania_naviera.Properties.Resources.btn_modificar;
+            this.btn_modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_modificar.Location = new System.Drawing.Point(316, 327);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(56, 48);
+            this.btn_modificar.TabIndex = 3;
+            this.btn_modificar.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // btn_agregar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(63, 154);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Eslora: ";
+            this.btn_agregar.BackgroundImage = global::Compania_naviera.Properties.Resources.btn_nuevo1;
+            this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar.Location = new System.Drawing.Point(26, 327);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(56, 47);
+            this.btn_agregar.TabIndex = 2;
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
             // 
-            // label7
+            // btn_salir
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(335, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Manga: ";
+            this.btn_salir.BackgroundImage = global::Compania_naviera.Properties.Resources.boton_exit;
+            this.btn_salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_salir.Location = new System.Drawing.Point(614, 327);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(56, 46);
+            this.btn_salir.TabIndex = 4;
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
             // 
-            // label8
+            // Busqueda
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(228, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Cantidad maxima de pasajeros:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(222, 77);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(159, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Cantidad maxima de tripulantes: ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(271, 103);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 13);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Cantidad de motores: ";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(277, 127);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Tipo de clasificacion";
-            // 
-            // txt_codigo
-            // 
-            this.txt_codigo.Location = new System.Drawing.Point(111, 22);
-            this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(100, 20);
-            this.txt_codigo.TabIndex = 2;
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.Location = new System.Drawing.Point(111, 48);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(100, 20);
-            this.txt_nombre.TabIndex = 2;
-            // 
-            // txt_altura
-            // 
-            this.txt_altura.Location = new System.Drawing.Point(111, 74);
-            this.txt_altura.Name = "txt_altura";
-            this.txt_altura.Size = new System.Drawing.Size(100, 20);
-            this.txt_altura.TabIndex = 2;
-            // 
-            // txt_autonomia
-            // 
-            this.txt_autonomia.Location = new System.Drawing.Point(111, 100);
-            this.txt_autonomia.Name = "txt_autonomia";
-            this.txt_autonomia.Size = new System.Drawing.Size(100, 20);
-            this.txt_autonomia.TabIndex = 2;
-            // 
-            // txt_desplazamiento
-            // 
-            this.txt_desplazamiento.Location = new System.Drawing.Point(111, 126);
-            this.txt_desplazamiento.Name = "txt_desplazamiento";
-            this.txt_desplazamiento.Size = new System.Drawing.Size(100, 20);
-            this.txt_desplazamiento.TabIndex = 2;
-            // 
-            // txt_eslora
-            // 
-            this.txt_eslora.Location = new System.Drawing.Point(111, 151);
-            this.txt_eslora.Name = "txt_eslora";
-            this.txt_eslora.Size = new System.Drawing.Size(100, 20);
-            this.txt_eslora.TabIndex = 2;
-            // 
-            // txt_manga
-            // 
-            this.txt_manga.Location = new System.Drawing.Point(387, 26);
-            this.txt_manga.Name = "txt_manga";
-            this.txt_manga.Size = new System.Drawing.Size(115, 20);
-            this.txt_manga.TabIndex = 2;
-            // 
-            // txt_cantiada_pasajeros
-            // 
-            this.txt_cantiada_pasajeros.Location = new System.Drawing.Point(387, 50);
-            this.txt_cantiada_pasajeros.Name = "txt_cantiada_pasajeros";
-            this.txt_cantiada_pasajeros.Size = new System.Drawing.Size(100, 20);
-            this.txt_cantiada_pasajeros.TabIndex = 2;
-            // 
-            // txt_cantidad_tripulantes
-            // 
-            this.txt_cantidad_tripulantes.Location = new System.Drawing.Point(387, 74);
-            this.txt_cantidad_tripulantes.Name = "txt_cantidad_tripulantes";
-            this.txt_cantidad_tripulantes.Size = new System.Drawing.Size(100, 20);
-            this.txt_cantidad_tripulantes.TabIndex = 2;
-            // 
-            // txt_cantidad_motores
-            // 
-            this.txt_cantidad_motores.Location = new System.Drawing.Point(387, 100);
-            this.txt_cantidad_motores.Name = "txt_cantidad_motores";
-            this.txt_cantidad_motores.Size = new System.Drawing.Size(100, 20);
-            this.txt_cantidad_motores.TabIndex = 2;
-            // 
-            // cmb_tipo
-            // 
-            this.cmb_tipo.FormattingEnabled = true;
-            this.cmb_tipo.Location = new System.Drawing.Point(387, 124);
-            this.cmb_tipo.Name = "cmb_tipo";
-            this.cmb_tipo.Size = new System.Drawing.Size(121, 21);
-            this.cmb_tipo.TabIndex = 3;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btn_registrar);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cmb_tipo);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txt_cantidad_motores);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txt_cantidad_tripulantes);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txt_cantiada_pasajeros);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txt_manga);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txt_eslora);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txt_desplazamiento);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txt_autonomia);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txt_altura);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.txt_nombre);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.txt_codigo);
-            this.groupBox1.Location = new System.Drawing.Point(59, 31);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(558, 215);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Navios";
-            // 
-            // btn_registrar
-            // 
-            this.btn_registrar.Location = new System.Drawing.Point(426, 167);
-            this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Size = new System.Drawing.Size(82, 31);
-            this.btn_registrar.TabIndex = 4;
-            this.btn_registrar.Text = "Registrar";
-            this.btn_registrar.UseVisualStyleBackColor = true;
+            this.Busqueda.Controls.Add(this.btn_consultar);
+            this.Busqueda.Controls.Add(this.label1);
+            this.Busqueda.Controls.Add(this.label2);
+            this.Busqueda.Controls.Add(this.textBox1);
+            this.Busqueda.Controls.Add(this.comboBox1);
+            this.Busqueda.Location = new System.Drawing.Point(26, 27);
+            this.Busqueda.Name = "Busqueda";
+            this.Busqueda.Size = new System.Drawing.Size(644, 64);
+            this.Busqueda.TabIndex = 0;
+            this.Busqueda.TabStop = false;
+            this.Busqueda.Text = "Busqueda";
             // 
             // navios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Compania_naviera.Properties.Resources.navio;
-            this.ClientSize = new System.Drawing.Size(708, 302);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(707, 384);
+            this.Controls.Add(this.Busqueda);
+            this.Controls.Add(this.btn_salir);
+            this.Controls.Add(this.btn_agregar);
+            this.Controls.Add(this.btn_modificar);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "navios";
-            this.Text = "navios";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "consulta_navios";
+            this.Load += new System.EventHandler(this.Navios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Busqueda.ResumeLayout(false);
+            this.Busqueda.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -291,28 +163,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txt_codigo;
-        private System.Windows.Forms.TextBox txt_nombre;
-        private System.Windows.Forms.TextBox txt_altura;
-        private System.Windows.Forms.TextBox txt_autonomia;
-        private System.Windows.Forms.TextBox txt_desplazamiento;
-        private System.Windows.Forms.TextBox txt_eslora;
-        private System.Windows.Forms.TextBox txt_manga;
-        private System.Windows.Forms.TextBox txt_cantiada_pasajeros;
-        private System.Windows.Forms.TextBox txt_cantidad_tripulantes;
-        private System.Windows.Forms.TextBox txt_cantidad_motores;
-        private System.Windows.Forms.ComboBox cmb_tipo;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_registrar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_consultar;
+        private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.Button btn_agregar;
+        private System.Windows.Forms.Button btn_salir;
+        private System.Windows.Forms.GroupBox Busqueda;
     }
 }

@@ -54,7 +54,7 @@
             this.label1.Location = new System.Drawing.Point(173, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Usuario: ";
             // 
             // label2
@@ -63,7 +63,7 @@
             this.label2.Location = new System.Drawing.Point(166, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Password:";
             // 
             // txt_usuario
@@ -71,21 +71,21 @@
             this.txt_usuario.Location = new System.Drawing.Point(228, 38);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(126, 20);
-            this.txt_usuario.TabIndex = 2;
+            this.txt_usuario.TabIndex = 1;
             // 
             // txt_password
             // 
             this.txt_password.Location = new System.Drawing.Point(228, 80);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(126, 20);
-            this.txt_password.TabIndex = 2;
+            this.txt_password.TabIndex = 3;
             // 
             // btn_ingresar
             // 
             this.btn_ingresar.Location = new System.Drawing.Point(176, 121);
             this.btn_ingresar.Name = "btn_ingresar";
             this.btn_ingresar.Size = new System.Drawing.Size(84, 33);
-            this.btn_ingresar.TabIndex = 3;
+            this.btn_ingresar.TabIndex = 4;
             this.btn_ingresar.Text = "Ingresar";
             this.btn_ingresar.UseVisualStyleBackColor = true;
             this.btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
@@ -95,7 +95,7 @@
             this.btn_salir.Location = new System.Drawing.Point(270, 121);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(84, 33);
-            this.btn_salir.TabIndex = 3;
+            this.btn_salir.TabIndex = 5;
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
             // 

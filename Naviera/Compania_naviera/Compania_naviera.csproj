@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceso_a_datos\Helper\DBHelper.cs" />
-    <Compile Include="Presentacion\consulta_navios.cs">
+    <Compile Include="Presentacion\navios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\consulta_navios.Designer.cs">
-      <DependentUpon>consulta_navios.cs</DependentUpon>
+    <Compile Include="Presentacion\navios.Designer.cs">
+      <DependentUpon>navios.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_principal.cs">
       <SubType>Form</SubType>
@@ -65,22 +65,25 @@
     <Compile Include="Presentacion\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\navios.cs">
+    <Compile Include="Presentacion\registro_navios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\navios.Designer.cs">
-      <DependentUpon>navios.cs</DependentUpon>
+    <Compile Include="Presentacion\registro_navios.Designer.cs">
+      <DependentUpon>registro_navios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\navios.resx">
+      <DependentUpon>navios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_principal.resx">
       <DependentUpon>frm_principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\navios.resx">
-      <DependentUpon>navios.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\registro_navios.resx">
+      <DependentUpon>registro_navios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,6 +115,9 @@
     <Folder Include="Negocio\Servicios\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Recursos\botones\boton_exit.png" />
+    <Content Include="Recursos\botones\btn_modificar.jpg" />
+    <Content Include="Recursos\botones\btn_nuevo.jpg" />
     <Content Include="Recursos\candado.jpg" />
     <Content Include="Recursos\descarga.jpg" />
     <Content Include="Recursos\Fondo_principal.jpg" />

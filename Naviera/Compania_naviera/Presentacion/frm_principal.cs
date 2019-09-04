@@ -25,6 +25,12 @@ namespace Compania_naviera.Presentacion
 
         private void RegistrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            registro_navios frm_navios = new registro_navios();
+            frm_navios.ShowDialog();
+        }
+
+        private void PasajerosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             navios frm_navios = new navios();
             frm_navios.ShowDialog();
         }

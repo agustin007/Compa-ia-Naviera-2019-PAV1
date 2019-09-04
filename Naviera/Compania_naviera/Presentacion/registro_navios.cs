@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Compania_naviera.Presentacion
 {
-    public partial class consulta_navios : Form
+    public partial class registro_navios : Form
     {
-        public consulta_navios()
+        public registro_navios()
         {
             InitializeComponent();
+        }
+
+        private void Btn_aceptar_Click(object sender, EventArgs e)
+        {
+
+
+            this.Close();
         }
     }
 }

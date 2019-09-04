@@ -10,3 +10,16 @@ C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compan
 C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.exe
 C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.pdb
 C:\Users\Agustin\source\repos\Compania_naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.navios.resources
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\bin\Debug\Compania_naviera.exe.config
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\bin\Debug\Compania_naviera.exe
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\bin\Debug\Compania_naviera.pdb
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.csprojAssemblyReference.cache
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.frm_principal.resources
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.login.resources
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.navios.resources
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Properties.Resources.resources
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.csproj.GenerateResource.cache
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.exe
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.pdb
+C:\Users\Agustin\Desktop\Trabajo Practico PAV_2019\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.registro_navios.resources

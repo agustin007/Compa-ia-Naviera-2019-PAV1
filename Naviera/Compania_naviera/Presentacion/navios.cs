@@ -16,5 +16,21 @@ namespace Compania_naviera.Presentacion
         {
             InitializeComponent();
         }
+
+        private void Btn_salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Btn_agregar_Click(object sender, EventArgs e)
+        {
+            registro_navios frm_registro_navios = new registro_navios();
+            frm_registro_navios.ShowDialog();
+        }
+
+        private void Navios_Load(object sender, EventArgs e)
+        {
+            btn_modificar.Enabled = false;
+        }
     }
 }
