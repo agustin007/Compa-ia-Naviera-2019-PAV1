@@ -15,11 +15,11 @@ namespace Compania_naviera.Presentacion
 {
     public partial class frm_navios : Form
     {
-        private NavioServicio sevicio;
+        private NavioServicio servicio;
 
         public frm_navios()
         {
-            sevicio = new NavioServicio();
+            servicio = new NavioServicio();
             InitializeComponent();
         }
 
@@ -44,12 +44,22 @@ namespace Compania_naviera.Presentacion
             if(txt_cod.Text != "")
             {
                 int codigo = int.Parse(txt_cod.Text);
-                IList<Navio> navios = sevicio.ObtenerNavioPorId(codigo);
+                IList<Navio> navios = servicio.ObtenerNavioPorId(codigo);
 
                 dgv_navios.Rows.Clear();
                 foreach(Navio oNavio in navios)
                 {
                     dgv_navios.Rows.Add(new object[] {oNavio.Codigo, oNavio.Nombre, oNavio.Altura, oNavio.Autonomia,oNavio.Desplazamiento, oNavio.Eslora, oNavio.Manga, oNavio.Cantidad_pasajeros, oNavio.Cantidad_tripulacion, oNavio.Tipo_clasificacion, oNavio.Cantidad_motores });
+                }
+            }
+            else
+            {
+                IList<Navio> todos_los_navios = servicio.ObtenerTodosLosNavios();
+
+                dgv_navios.Rows.Clear();
+                foreach(Navio oTNavio in todos_los_navios)
+                {
+                    dgv_navios.Rows.Add(new object[] { oTNavio.Codigo, oTNavio.Nombre, oTNavio.Altura, oTNavio.Autonomia, oTNavio.Desplazamiento, oTNavio.Eslora, oTNavio.Manga, oTNavio.Cantidad_pasajeros, oTNavio.Cantidad_tripulacion, oTNavio.Tipo_clasificacion, oTNavio.Cantidad_motores });
                 }
             }
         }

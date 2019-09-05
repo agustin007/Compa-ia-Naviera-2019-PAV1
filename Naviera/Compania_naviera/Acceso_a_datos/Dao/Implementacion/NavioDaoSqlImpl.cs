@@ -31,6 +31,21 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             return lista;
         }
 
+        public IList<Navio> GetTodosLosNavios()
+        {
+            List<Navio> lista = new List<Navio>();
+
+            string sql = @"SELECT * " +
+                          "FROM Navios ";
+
+            DataTable tabla = DBHelper.getDBHelper().ConsultaSQL(sql);
+
+            foreach(DataRow row in tabla.Rows)
+            {
+                lista.Add(MapeoNavios(row));
+            }
+            return lista;
+        }
         private Navio MapeoNavios(DataRow row)
         {
             Navio oNavio = new Navio();

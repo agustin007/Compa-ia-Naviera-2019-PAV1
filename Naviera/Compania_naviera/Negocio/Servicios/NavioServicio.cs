@@ -21,5 +21,10 @@ namespace Compania_naviera.Negocio.Servicios
         {
             return dao.GetNavioById(id);
         }
+
+        public IList<Navio> ObtenerTodosLosNavios()
+        {
+            return dao.GetTodosLosNavios();
+        }
     }
 }

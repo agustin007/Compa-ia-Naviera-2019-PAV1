@@ -9,5 +9,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Interfaz
     public interface NavioDao<T>
     {
         IList<T> GetNavioById(int id);
+
+        IList<T> GetTodosLosNavios();
     }
 }
