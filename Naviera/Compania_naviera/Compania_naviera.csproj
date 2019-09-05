@@ -46,7 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acceso_a_datos\Dao\Implementacion\ItinerarioDaoSqlImpl.cs" />
+    <Compile Include="Acceso_a_datos\Dao\Interfaz\ItinerarioDao.cs" />
     <Compile Include="Acceso_a_datos\Helper\DBHelper.cs" />
+    <Compile Include="Negocio\Entidades\Itinerario.cs" />
+    <Compile Include="Negocio\Servicios\ItinerarioServicio.cs" />
+    <Compile Include="Presentacion\frm_itinerarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_itinerarios.Designer.cs">
+      <DependentUpon>frm_itinerarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\navios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +75,12 @@
     <Compile Include="Presentacion\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\registro_itinerarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\registro_itinerarios.Designer.cs">
+      <DependentUpon>registro_itinerarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\registro_navios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\frm_itinerarios.resx">
+      <DependentUpon>frm_itinerarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\navios.resx">
       <DependentUpon>navios.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\registro_itinerarios.resx">
+      <DependentUpon>registro_itinerarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\registro_navios.resx">
       <DependentUpon>registro_navios.cs</DependentUpon>
@@ -108,18 +130,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Acceso_a_datos\Dao\Implementacion\" />
-    <Folder Include="Acceso_a_datos\Dao\Interfaz\" />
-    <Folder Include="Negocio\Entidades\" />
-    <Folder Include="Negocio\Servicios\" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Recursos\botones\boton_buscar.png" />
     <Content Include="Recursos\botones\boton_exit.png" />
     <Content Include="Recursos\botones\btn_modificar.jpg" />
     <Content Include="Recursos\botones\btn_nuevo.jpg" />
     <Content Include="Recursos\candado.jpg" />
     <Content Include="Recursos\descarga.jpg" />
+    <None Include="Recursos\fondo_itinerarios.jpg" />
     <Content Include="Recursos\Fondo_principal.jpg" />
     <Content Include="Recursos\navio.jpg" />
   </ItemGroup>

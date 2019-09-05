@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Compania_naviera.Presentacion
 {
     public partial class frm_principal : Form
@@ -19,8 +20,8 @@ namespace Compania_naviera.Presentacion
 
         private void Frm_principal_Load(object sender, EventArgs e)
         {
-            login frm_login = new login();
-            frm_login.ShowDialog();
+            //login frm_login = new login();
+            //frm_login.ShowDialog();
         }
 
         private void RegistrarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,6 +34,21 @@ namespace Compania_naviera.Presentacion
         {
             navios frm_navios = new navios();
             frm_navios.ShowDialog();
+        }
+
+        private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show(string.Concat("Esta seguro que desea salir "), "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void ItinerariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frm_itinerarios formulario_de_itinerarios = new frm_itinerarios();
+            formulario_de_itinerarios.ShowDialog();
         }
     }
 }
