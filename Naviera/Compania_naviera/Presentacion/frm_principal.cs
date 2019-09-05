@@ -32,7 +32,7 @@ namespace Compania_naviera.Presentacion
 
         private void PasajerosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            navios frm_navios = new navios();
+            frm_navios frm_navios = new frm_navios();
             frm_navios.ShowDialog();
         }
 
