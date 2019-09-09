@@ -26,5 +26,10 @@ namespace Compania_naviera.Negocio.Servicios
         {
             return dao.GetTodosLosNavios();
         }
+
+        public bool RegistrarNavio(Navio obj)
+        {
+            return dao.RegistrerNavios();
+        }
     }
 }

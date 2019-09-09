@@ -46,6 +46,35 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             }
             return lista;
         }
+
+        public bool RegistrerNavios(Navio obj)
+        {
+            bool agregacionCorrecta;
+
+            Navio oNavio = new Navio();
+            try
+            {
+                string sql = "INSERT INTO Navios(cod_navio, nombre, altura, " +
+                             "autonomia, desplazamiento, eslora, manga," +
+                             "cantidad_maxima_pasajeros, cantidad_maxima_tripulantes," +
+                             " tipo_clasificacion, cantidad_motores)" +
+                             "VALUES" + (oNavio.Codigo, oNavio.Nombre, oNavio.Altura, oNavio.Autonomia,
+                             oNavio.Desplazamiento, oNavio.Eslora, oNavio.Manga, oNavio.Cantidad_pasajeros,
+                             oNavio.Cantidad_tripulacion, oNavio.Tipo_clasificacion, oNavio.Cantidad_motores);
+                agregacionCorrecta = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return agregacionCorrecta;
+        }
+
+        public bool RegistrerNavios()
+        {
+            throw new NotImplementedException();
+        }
+
         private Navio MapeoNavios(DataRow row)
         {
             Navio oNavio = new Navio();

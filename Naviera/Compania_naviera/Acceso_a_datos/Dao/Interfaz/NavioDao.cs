@@ -11,5 +11,8 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Interfaz
         IList<T> GetNavioById(int id);
 
         IList<T> GetTodosLosNavios();
+
+        bool RegistrerNavios(T obj);
+        bool RegistrerNavios();
     }
 }
