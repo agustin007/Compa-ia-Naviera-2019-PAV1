@@ -27,9 +27,14 @@ namespace Compania_naviera.Negocio.Servicios
             return dao.GetTodosLosNavios();
         }
 
-        public bool RegistrarNavio(Navio obj)
+        public bool RegistrarNavio(Navio oNavio)
         {
-            return dao.RegistrerNavios();
+            return dao.RegistrerNavios(oNavio);
+        }
+
+        public IList<Clasificacion_Navio> ObtenerTipoNavio()
+        {
+            return dao.GetNavioTipo();
         }
     }
 }

@@ -31,6 +31,33 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             return lista;
         }
 
+        public IList<Clasificacion_Navio> GetNavioTipo()
+        {
+            List<Clasificacion_Navio> listadoNavioTipo = new List<Clasificacion_Navio>();
+
+            string sql = @"SELECT * FROM Clasificacion_navio WHERE cod_clasificacion <> 1 ";
+
+            DataTable resultado = DBHelper.getDBHelper().ConsultaSQL(sql);
+            
+            foreach(DataRow row in resultado.Rows)
+            {
+                listadoNavioTipo.Add(mapeoTipoNavio(row));
+            }
+            return listadoNavioTipo;
+        }
+
+        private Clasificacion_Navio mapeoTipoNavio(DataRow row)
+        {
+            Clasificacion_Navio oNavio = new Clasificacion_Navio()
+            {
+                CodClasificacion = Convert.ToInt32(row["CodClasificacion"].ToString()),
+                Descripcion = row["Descripcion"].ToString()
+            };
+            //oNavio.CodClasificacion = Convert.ToInt32(row["CodClasificacion"].ToString());
+            //oNavio.Descripcion = row["Descripcion"].ToString();
+            return oNavio;
+        }
+
         public IList<Navio> GetTodosLosNavios()
         {
             List<Navio> lista = new List<Navio>();
@@ -47,32 +74,17 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             return lista;
         }
 
-        public bool RegistrerNavios(Navio obj)
+        public bool RegistrerNavios(Navio oNavio)
         {
-            bool agregacionCorrecta;
-
-            Navio oNavio = new Navio();
-            try
-            {
-                string sql = "INSERT INTO Navios(cod_navio, nombre, altura, " +
+            string sql = "INSERT INTO Navios(cod_navio, nombre, altura, " +
                              "autonomia, desplazamiento, eslora, manga," +
                              "cantidad_maxima_pasajeros, cantidad_maxima_tripulantes," +
                              " tipo_clasificacion, cantidad_motores)" +
                              "VALUES" + (oNavio.Codigo, oNavio.Nombre, oNavio.Altura, oNavio.Autonomia,
                              oNavio.Desplazamiento, oNavio.Eslora, oNavio.Manga, oNavio.Cantidad_pasajeros,
                              oNavio.Cantidad_tripulacion, oNavio.Tipo_clasificacion, oNavio.Cantidad_motores);
-                agregacionCorrecta = true;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            return agregacionCorrecta;
-        }
 
-        public bool RegistrerNavios()
-        {
-            throw new NotImplementedException();
+            return DBHelper.getDBHelper().ejecutarSQL(sql) > 0;
         }
 
         private Navio MapeoNavios(DataRow row)

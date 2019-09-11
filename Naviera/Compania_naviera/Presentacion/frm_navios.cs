@@ -37,11 +37,13 @@ namespace Compania_naviera.Presentacion
         private void Navios_Load(object sender, EventArgs e)
         {
             btn_modificar.Enabled = false;
+
+            llenarCombo(cmb_tipo, servicio.ObtenerTipoNavio(), "descripcion", "cod_clasificacion");
         }
 
         private void Btn_consultar_Click(object sender, EventArgs e)
         {
-            if(txt_cod.Text != "")
+                if(txt_cod.Text != "")
             {
                 int codigo = int.Parse(txt_cod.Text);
                 IList<Navio> navios = servicio.ObtenerNavioPorId(codigo);
@@ -63,5 +65,14 @@ namespace Compania_naviera.Presentacion
                 }
             }
         }
+
+        private void llenarCombo(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.DisplayMember = display;
+            cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
+        }
+
     }
 }
