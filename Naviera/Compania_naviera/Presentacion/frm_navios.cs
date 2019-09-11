@@ -16,7 +16,7 @@ namespace Compania_naviera.Presentacion
     public partial class frm_navios : Form
     {
         private NavioServicio servicio;
-
+        private string hj;
         public frm_navios()
         {
             servicio = new NavioServicio();

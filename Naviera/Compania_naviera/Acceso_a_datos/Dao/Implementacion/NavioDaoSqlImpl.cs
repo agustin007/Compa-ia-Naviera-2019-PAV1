@@ -55,9 +55,10 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             };
             //oNavio.CodClasificacion = Convert.ToInt32(row["CodClasificacion"].ToString());
             //oNavio.Descripcion = row["Descripcion"].ToString();
+                
             return oNavio;
         }
-
+        
         public IList<Navio> GetTodosLosNavios()
         {
             List<Navio> lista = new List<Navio>();
