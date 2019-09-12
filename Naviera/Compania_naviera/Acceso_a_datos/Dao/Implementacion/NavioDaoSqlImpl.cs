@@ -35,7 +35,8 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
         {
             List<Clasificacion_Navio> listadoNavioTipo = new List<Clasificacion_Navio>();
 
-            string sql = @"SELECT * FROM Clasificacion_navio WHERE cod_clasificacion <> 1 ";
+            string sql = @"SELECT * " +
+                          "FROM clasificacion_navio";
 
             DataTable resultado = DBHelper.getDBHelper().ConsultaSQL(sql);
             
@@ -50,8 +51,8 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
         {
             Clasificacion_Navio oNavio = new Clasificacion_Navio()
             {
-                CodClasificacion = Convert.ToInt32(row["CodClasificacion"].ToString()),
-                Descripcion = row["Descripcion"].ToString()
+                CodClasificacion = Convert.ToInt32(row["cod_clasificacion"].ToString()),
+                Descripcion = row["descripcion"].ToString()
             };
             //oNavio.CodClasificacion = Convert.ToInt32(row["CodClasificacion"].ToString());
             //oNavio.Descripcion = row["Descripcion"].ToString();
@@ -81,9 +82,9 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
                              "autonomia, desplazamiento, eslora, manga," +
                              "cantidad_maxima_pasajeros, cantidad_maxima_tripulantes," +
                              " tipo_clasificacion, cantidad_motores)" +
-                             "VALUES" + (oNavio.Codigo, oNavio.Nombre, oNavio.Altura, oNavio.Autonomia,
-                             oNavio.Desplazamiento, oNavio.Eslora, oNavio.Manga, oNavio.Cantidad_pasajeros,
-                             oNavio.Cantidad_tripulacion, oNavio.Tipo_clasificacion, oNavio.Cantidad_motores);
+                             "VALUES (" + oNavio.Codigo + "," + oNavio.Nombre + "," + oNavio.Altura + "," + oNavio.Autonomia + "," +
+                             oNavio.Desplazamiento + "," + oNavio.Eslora + "," + oNavio.Manga + "," + oNavio.Cantidad_pasajeros + "," +
+                             oNavio.Cantidad_tripulacion + "," + oNavio.Tipo_clasificacion + "," + oNavio.Cantidad_motores + ")";
 
             return DBHelper.getDBHelper().ejecutarSQL(sql) > 0;
         }

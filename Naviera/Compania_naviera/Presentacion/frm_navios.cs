@@ -38,7 +38,7 @@ namespace Compania_naviera.Presentacion
         {
             btn_modificar.Enabled = false;
 
-            llenarCombo(cmb_tipo, servicio.ObtenerTipoNavio(), "descripcion", "cod_clasificacion");
+            llenarCombo(cmb_tipo, servicio.ObtenerTipoNavio(), "Descripcion", "CodClasificacion");
         }
 
         private void Btn_consultar_Click(object sender, EventArgs e)
