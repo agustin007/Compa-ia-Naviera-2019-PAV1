@@ -1,6 +1,6 @@
 ﻿namespace Compania_naviera.Presentacion
 {
-    partial class itinerario
+    partial class frm_itinerarios
     {
         /// <summary>
         /// Required designer variable.
@@ -68,7 +68,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(32, 23);
             this.btn_buscar.TabIndex = 2;
             this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
+            this.btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click_1);
             // 
             // groupBox1
             // 
@@ -148,7 +148,7 @@
             this.btn_modificar.TabIndex = 6;
             this.btn_modificar.UseVisualStyleBackColor = true;
             // 
-            // itinerarios
+            // frm_itinerarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,7 +159,7 @@
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.dgv_itinerarios);
             this.Controls.Add(this.groupBox1);
-            this.Name = "itinerarios";
+            this.Name = "frm_itinerarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "itinerarios";
             this.groupBox1.ResumeLayout(false);

@@ -18,23 +18,27 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
         public ItinerarioDaoSqlImpl() { }
 
         public IList<Itinerario> getItinerarioById(int id)
-
-        //public IList<Itinerario> getItinerarioById(int id)
         {
             List<Itinerario> lista = new List<Itinerario>();
-            Itinerario oItinerario = null;
-
-            string sql = @"SELECT *" +
-                          "FROM Itinerarios" +
-                          "WHERE id_itinerario =" + id.ToString();
+            string sql = @"SELECT * " +
+                          "FROM Itinerarios " +
+                          "WHERE cod_intinerarios = " + id.ToString();
             DataTable resultado = DBHelper.getDBHelper().ConsultaSQL(sql);
 
             foreach(DataRow row in resultado.Rows)
             {
-                //int codigo = Convert.ToInt32(row[0].ToString());
-                lista.Add();
+                lista.Add(MapeoItinerarios(row));
             }
             return lista;
+        }
+
+        private Itinerario MapeoItinerarios(DataRow row)
+        {
+            Itinerario oItinerario = new Itinerario();
+            oItinerario.Id = Convert.ToInt32(row[0].ToString());
+            oItinerario.Descripcion = row[1].ToString();
+            oItinerario.Categoria = row[2].ToString();
+            return oItinerario;
         }
     }
 }

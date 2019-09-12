@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Compania_naviera.Negocio.Servicios;
+using Compania_naviera.Negocio.Entidades;
+
 namespace Compania_naviera.Presentacion
 {
-    public partial class itinerario : Form
+    public partial class frm_itinerarios : Form
     {
         private ItinerarioServicio servicio;
 
-        public itinerario()
+        public frm_itinerarios()
         {
             servicio = new ItinerarioServicio();    
             InitializeComponent();
@@ -33,15 +35,20 @@ namespace Compania_naviera.Presentacion
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            if(txt_codigo.Text != "")
+
+        }
+
+        private void Btn_buscar_Click_1(object sender, EventArgs e)
+        {
+            if (txt_codigo.Text != "")
             {
                 int codigo = int.Parse(txt_codigo.Text);
-                IList<itinerario> itinerarios = servicio.obtenerItinerarioPorId(codigo);
+                IList<Itinerario> itinerarios = servicio.obtenerItinerarioPorId(codigo);
 
                 dgv_itinerarios.Rows.Clear();
-                foreach(itinerario oItinerarios in itinerarios)
+                foreach (Itinerario oItinerarios in itinerarios)
                 {
-                    dgv_itinerarios.Rows.Add(new object[] { oItinerarios.id_itinerario, oItinerarios.descripcion, oItinerarios.categoria });
+                    dgv_itinerarios.Rows.Add(new object[] { oItinerarios.Id, oItinerarios.Descripcion, oItinerarios.Categoria });
                 }
             }
         }

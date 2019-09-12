@@ -32,17 +32,23 @@ namespace Compania_naviera.Presentacion
 
         private void PasajerosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            navios frm_navios = new navios();
+            frm_navios frm_navios = new frm_navios();
             frm_navios.ShowDialog();
         }
 
         private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(string.Concat("Esta seguro que desea salir "), "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //if (DialogResult.Yes)
-            //{
-            //    this.Close();
-            //}
+            var resultado = MessageBox.Show(string.Concat("Esta seguro que desea salir "), "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void ItinerariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frm_itinerarios formulario_de_itinerarios = new frm_itinerarios();
+            formulario_de_itinerarios.ShowDialog();
         }
     }
 }

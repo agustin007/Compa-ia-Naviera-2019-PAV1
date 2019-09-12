@@ -15,7 +15,7 @@ namespace Compania_naviera.Acceso_a_datos.Helper
 
         private DBHelper()
         {
-            cadena_conexion = "Data Source=DESKTOP-55MGULP;Initial Catalog=Compañia_Naviera;Integrated Security=True";
+            cadena_conexion = "Data Source=MAQUIS;Initial Catalog=Naviera_67298;User ID=avisuales1;Password=avisuales1";
         }
 
         public static DBHelper getDBHelper()

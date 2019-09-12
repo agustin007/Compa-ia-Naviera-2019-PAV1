@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Compania_naviera</RootNamespace>
     <AssemblyName>Compania_naviera</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,21 +48,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceso_a_datos\Dao\Implementacion\ItinerarioDaoSqlImpl.cs" />
+    <Compile Include="Acceso_a_datos\Dao\Implementacion\NavioDaoSqlImpl.cs" />
     <Compile Include="Acceso_a_datos\Dao\Interfaz\ItinerarioDao.cs" />
+    <Compile Include="Acceso_a_datos\Dao\Interfaz\NavioDao.cs" />
     <Compile Include="Acceso_a_datos\Helper\DBHelper.cs" />
+    <Compile Include="Negocio\Entidades\Clasificacion_Navio.cs" />
     <Compile Include="Negocio\Entidades\Itinerario.cs" />
+    <Compile Include="Negocio\Entidades\Navio.cs" />
     <Compile Include="Negocio\Servicios\ItinerarioServicio.cs" />
-    <Compile Include="Presentacion\itinerarios.cs">
+    <Compile Include="Negocio\Servicios\NavioServicio.cs" />
+    <Compile Include="Presentacion\frm_itinerarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\itinerarios.Designer.cs">
-      <DependentUpon>itinerarios.cs</DependentUpon>
+    <Compile Include="Presentacion\frm_itinerarios.Designer.cs">
+      <DependentUpon>frm_itinerarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\navios.cs">
+    <Compile Include="Presentacion\frm_navios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\navios.Designer.cs">
-      <DependentUpon>navios.cs</DependentUpon>
+    <Compile Include="Presentacion\frm_navios.Designer.cs">
+      <DependentUpon>frm_navios.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_principal.cs">
       <SubType>Form</SubType>
@@ -89,11 +95,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\itinerarios.resx">
-      <DependentUpon>itinerarios.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frm_itinerarios.resx">
+      <DependentUpon>frm_itinerarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\navios.resx">
-      <DependentUpon>navios.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frm_navios.resx">
+      <DependentUpon>frm_navios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_principal.resx">
       <DependentUpon>frm_principal.cs</DependentUpon>
