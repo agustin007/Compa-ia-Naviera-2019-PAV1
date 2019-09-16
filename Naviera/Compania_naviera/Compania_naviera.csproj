@@ -47,14 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acceso_a_datos\Dao\Implementacion\ClasificacionNavioDaoSqlImpl.cs" />
     <Compile Include="Acceso_a_datos\Dao\Implementacion\ItinerarioDaoSqlImpl.cs" />
     <Compile Include="Acceso_a_datos\Dao\Implementacion\NavioDaoSqlImpl.cs" />
+    <Compile Include="Acceso_a_datos\Dao\Interfaz\ClasificacionNavioDao.cs" />
     <Compile Include="Acceso_a_datos\Dao\Interfaz\ItinerarioDao.cs" />
     <Compile Include="Acceso_a_datos\Dao\Interfaz\NavioDao.cs" />
     <Compile Include="Acceso_a_datos\Helper\DBHelper.cs" />
-    <Compile Include="Negocio\Entidades\Clasificacion_Navio.cs" />
+    <Compile Include="Negocio\Entidades\ClasificacionNavio.cs" />
     <Compile Include="Negocio\Entidades\Itinerario.cs" />
     <Compile Include="Negocio\Entidades\Navio.cs" />
+    <Compile Include="Negocio\Servicios\ClasificacionNavioServicio.cs" />
     <Compile Include="Negocio\Servicios\ItinerarioServicio.cs" />
     <Compile Include="Negocio\Servicios\NavioServicio.cs" />
     <Compile Include="Presentacion\frm_itinerarios.cs">

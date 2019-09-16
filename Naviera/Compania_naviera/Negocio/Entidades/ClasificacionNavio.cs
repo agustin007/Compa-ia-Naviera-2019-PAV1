@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Compania_naviera.Negocio.Entidades
 {
-    public class Clasificacion_Navio
+    public class ClasificacionNavio
     {
         public int CodClasificacion { get; set; }
         public string Descripcion { get; set; }

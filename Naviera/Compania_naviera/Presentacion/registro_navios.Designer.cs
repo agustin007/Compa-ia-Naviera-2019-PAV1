@@ -284,6 +284,7 @@
             this.Name = "registro_navios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "navios";
+            this.Load += new System.EventHandler(this.Registro_navios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

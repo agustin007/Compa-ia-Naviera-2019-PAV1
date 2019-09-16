@@ -17,7 +17,7 @@ namespace Compania_naviera.Negocio.Entidades
         public int Manga { get; set; }
         public int Cantidad_pasajeros { get; set; }
         public int Cantidad_tripulacion { get; set; }
-        public int Tipo_clasificacion { get; set; }
+        public ClasificacionNavio Tipo_clasificacion { get; set; }
         public int Cantidad_motores { get; set; }
 
         public Navio() { }

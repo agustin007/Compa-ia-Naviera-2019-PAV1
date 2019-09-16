@@ -16,10 +16,12 @@ namespace Compania_naviera.Presentacion
     public partial class frm_navios : Form
     {
         private NavioServicio servicio;
-        private string hj;
+        private ClasificacionNavioServicio clasificacion_servicio;
+                               
         public frm_navios()
         {
             servicio = new NavioServicio();
+            clasificacion_servicio = new ClasificacionNavioServicio();
             InitializeComponent();
         }
 
@@ -37,8 +39,7 @@ namespace Compania_naviera.Presentacion
         private void Navios_Load(object sender, EventArgs e)
         {
             btn_modificar.Enabled = false;
-
-            llenarCombo(cmb_tipo, servicio.ObtenerTipoNavio(), "Descripcion", "CodClasificacion");
+            llenarCombo(cmb_tipo, clasificacion_servicio.ObtenerTipoNavio(), "Descripcion", "CodClasificacion");
         }
 
         private void Btn_consultar_Click(object sender, EventArgs e)

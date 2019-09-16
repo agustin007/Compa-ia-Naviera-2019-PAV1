@@ -31,34 +31,34 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             return lista;
         }
 
-        public IList<Clasificacion_Navio> GetNavioTipo()
-        {
-            List<Clasificacion_Navio> listadoNavioTipo = new List<Clasificacion_Navio>();
+        //public IList<Clasificacion_Navio> GetNavioTipo()
+        //{
+        //    List<Clasificacion_Navio> listadoNavioTipo = new List<Clasificacion_Navio>();
 
-            string sql = @"SELECT * " +
-                          "FROM clasificacion_navio";
+        //    string sql = @"SELECT * " +
+        //                  "FROM clasificacion_navio";
 
-            DataTable resultado = DBHelper.getDBHelper().ConsultaSQL(sql);
+        //    DataTable resultado = DBHelper.getDBHelper().ConsultaSQL(sql);
             
-            foreach(DataRow row in resultado.Rows)
-            {
-                listadoNavioTipo.Add(mapeoTipoNavio(row));
-            }
-            return listadoNavioTipo;
-        }
+        //    foreach(DataRow row in resultado.Rows)
+        //    {
+        //        listadoNavioTipo.Add(mapeoTipoNavio(row));
+        //    }
+        //    return listadoNavioTipo;
+        //}
 
-        private Clasificacion_Navio mapeoTipoNavio(DataRow row)
-        {
-            Clasificacion_Navio oNavio = new Clasificacion_Navio()
-            {
-                CodClasificacion = Convert.ToInt32(row["cod_clasificacion"].ToString()),
-                Descripcion = row["descripcion"].ToString()
-            };
-            //oNavio.CodClasificacion = Convert.ToInt32(row["CodClasificacion"].ToString());
-            //oNavio.Descripcion = row["Descripcion"].ToString();
+        //private Clasificacion_Navio mapeoTipoNavio(DataRow row)
+        //{
+        //    Clasificacion_Navio oNavio = new Clasificacion_Navio()
+        //    {
+        //        CodClasificacion = Convert.ToInt32(row["cod_clasificacion"].ToString()),
+        //        Descripcion = row["descripcion"].ToString()
+        //    };
+        //    //oNavio.CodClasificacion = Convert.ToInt32(row["CodClasificacion"].ToString());
+        //    //oNavio.Descripcion = row["Descripcion"].ToString();
                 
-            return oNavio;
-        }
+        //    return oNavio;
+        //}
         
         public IList<Navio> GetTodosLosNavios()
         {
@@ -101,7 +101,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             oNavio.Manga = Convert.ToInt32(row[6].ToString());
             oNavio.Cantidad_pasajeros = Convert.ToInt32(row[7].ToString());
             oNavio.Cantidad_tripulacion = Convert.ToInt32(row[8].ToString());
-            oNavio.Tipo_clasificacion = Convert.ToInt32(row[9].ToString());
+            //oNavio.Tipo_clasificacion = Convert.ToInt32(row[9].ToString());
             oNavio.Cantidad_motores = Convert.ToInt32(row[10].ToString());
             return oNavio;
         }
