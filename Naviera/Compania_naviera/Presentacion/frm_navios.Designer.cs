@@ -33,11 +33,6 @@
             this.cmb_tipo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_navios = new System.Windows.Forms.DataGridView();
-            this.btn_consultar = new System.Windows.Forms.Button();
-            this.btn_modificar = new System.Windows.Forms.Button();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.btn_salir = new System.Windows.Forms.Button();
-            this.Busqueda = new System.Windows.Forms.GroupBox();
             this.codigo_navio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +44,11 @@
             this.cantidad_tripulacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo_clasificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad_motores = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_consultar = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.btn_salir = new System.Windows.Forms.Button();
+            this.Busqueda = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_navios)).BeginInit();
             this.Busqueda.SuspendLayout();
             this.SuspendLayout();
@@ -108,63 +108,7 @@
             this.dgv_navios.ReadOnly = true;
             this.dgv_navios.Size = new System.Drawing.Size(644, 210);
             this.dgv_navios.TabIndex = 1;
-            // 
-            // btn_consultar
-            // 
-            this.btn_consultar.BackgroundImage = global::Compania_naviera.Properties.Resources.boton_buscar;
-            this.btn_consultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_consultar.Location = new System.Drawing.Point(576, 11);
-            this.btn_consultar.Name = "btn_consultar";
-            this.btn_consultar.Size = new System.Drawing.Size(51, 47);
-            this.btn_consultar.TabIndex = 4;
-            this.btn_consultar.UseVisualStyleBackColor = true;
-            this.btn_consultar.Click += new System.EventHandler(this.Btn_consultar_Click);
-            // 
-            // btn_modificar
-            // 
-            this.btn_modificar.BackgroundImage = global::Compania_naviera.Properties.Resources.btn_modificar;
-            this.btn_modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_modificar.Location = new System.Drawing.Point(316, 327);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(56, 48);
-            this.btn_modificar.TabIndex = 3;
-            this.btn_modificar.UseVisualStyleBackColor = true;
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.BackgroundImage = global::Compania_naviera.Properties.Resources.btn_nuevo1;
-            this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar.Location = new System.Drawing.Point(26, 327);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(56, 47);
-            this.btn_agregar.TabIndex = 2;
-            this.btn_agregar.UseVisualStyleBackColor = true;
-            this.btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
-            // 
-            // btn_salir
-            // 
-            this.btn_salir.BackgroundImage = global::Compania_naviera.Properties.Resources.boton_exit;
-            this.btn_salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_salir.Location = new System.Drawing.Point(614, 327);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(56, 46);
-            this.btn_salir.TabIndex = 4;
-            this.btn_salir.UseVisualStyleBackColor = true;
-            this.btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
-            // 
-            // Busqueda
-            // 
-            this.Busqueda.Controls.Add(this.btn_consultar);
-            this.Busqueda.Controls.Add(this.label1);
-            this.Busqueda.Controls.Add(this.label2);
-            this.Busqueda.Controls.Add(this.txt_cod);
-            this.Busqueda.Controls.Add(this.cmb_tipo);
-            this.Busqueda.Location = new System.Drawing.Point(26, 27);
-            this.Busqueda.Name = "Busqueda";
-            this.Busqueda.Size = new System.Drawing.Size(644, 64);
-            this.Busqueda.TabIndex = 0;
-            this.Busqueda.TabStop = false;
-            this.Busqueda.Text = "Busqueda";
+            this.dgv_navios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_navios_CellClick);
             // 
             // codigo_navio
             // 
@@ -231,6 +175,64 @@
             this.cantidad_motores.HeaderText = "Motores";
             this.cantidad_motores.Name = "cantidad_motores";
             this.cantidad_motores.ReadOnly = true;
+            // 
+            // btn_consultar
+            // 
+            this.btn_consultar.BackgroundImage = global::Compania_naviera.Properties.Resources.boton_buscar;
+            this.btn_consultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_consultar.Location = new System.Drawing.Point(576, 11);
+            this.btn_consultar.Name = "btn_consultar";
+            this.btn_consultar.Size = new System.Drawing.Size(51, 47);
+            this.btn_consultar.TabIndex = 4;
+            this.btn_consultar.UseVisualStyleBackColor = true;
+            this.btn_consultar.Click += new System.EventHandler(this.Btn_consultar_Click);
+            // 
+            // btn_modificar
+            // 
+            this.btn_modificar.BackgroundImage = global::Compania_naviera.Properties.Resources.btn_modificar;
+            this.btn_modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_modificar.Location = new System.Drawing.Point(316, 327);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(56, 48);
+            this.btn_modificar.TabIndex = 3;
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.BackgroundImage = global::Compania_naviera.Properties.Resources.btn_nuevo1;
+            this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar.Location = new System.Drawing.Point(26, 327);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(56, 47);
+            this.btn_agregar.TabIndex = 2;
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
+            // 
+            // btn_salir
+            // 
+            this.btn_salir.BackgroundImage = global::Compania_naviera.Properties.Resources.boton_exit;
+            this.btn_salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_salir.Location = new System.Drawing.Point(614, 327);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(56, 46);
+            this.btn_salir.TabIndex = 4;
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
+            // 
+            // Busqueda
+            // 
+            this.Busqueda.Controls.Add(this.btn_consultar);
+            this.Busqueda.Controls.Add(this.label1);
+            this.Busqueda.Controls.Add(this.label2);
+            this.Busqueda.Controls.Add(this.txt_cod);
+            this.Busqueda.Controls.Add(this.cmb_tipo);
+            this.Busqueda.Location = new System.Drawing.Point(26, 27);
+            this.Busqueda.Name = "Busqueda";
+            this.Busqueda.Size = new System.Drawing.Size(644, 64);
+            this.Busqueda.TabIndex = 0;
+            this.Busqueda.TabStop = false;
+            this.Busqueda.Text = "Busqueda";
             // 
             // frm_navios
             // 

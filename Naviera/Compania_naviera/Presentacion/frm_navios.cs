@@ -75,5 +75,15 @@ namespace Compania_naviera.Presentacion
             cbo.SelectedIndex = -1;
         }
 
+        private void Dgv_navios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btn_modificar.Enabled = true;
+        }
+
+        private void Btn_modificar_Click(object sender, EventArgs e)
+        {
+            registro_navios frm_registro_navios = new registro_navios();
+            frm_registro_navios.ShowDialog();
+        }
     }
 }

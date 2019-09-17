@@ -36,29 +36,77 @@ namespace Compania_naviera.Acceso_a_datos.Helper
         //              a) durante la apertura de la conexión
         //              b) durante la ejecución del comando.
 
-        public int ejecutarSQL(string strSql)
+        //public int ejecutarSQL(string strSql)
+        //{
+
+        //    SqlConnection cnn = new SqlConnection();
+        //    SqlCommand cmd = new SqlCommand();
+
+        //    try
+        //    {
+        //        cnn.ConnectionString = cadena_conexion;
+        //        cnn.Open();
+
+        //        cmd.Connection = cnn;
+        //        cmd.CommandText = strSql;
+        //        return cmd.ExecuteNonQuery();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        this.CloseConnection(cnn);
+        //    }
+        //}
+        public int EjecutarSQL(string strSql, Dictionary<string, object> parametros = null)
         {
-
-            SqlConnection cnn = new SqlConnection();
+            // Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”
+            SqlConnection conexion = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+            SqlTransaction t = null/* TODO Change to default(_) if this is not a reference type */;
+            int rtdo = 0;
 
+            // Try Catch Finally
+            // Trata de ejecutar el código contenido dentro del bloque Try - Catch
+            // Si hay error lo capta a través de una excepción
+            // Si no hubo error
             try
             {
-                cnn.ConnectionString = cadena_conexion;
-                cnn.Open();
-
-                cmd.Connection = cnn;
+                // Establece que conexión usar
+                conexion.ConnectionString = cadena_conexion;
+                // Abre la conexión
+                conexion.Open();
+                t = conexion.BeginTransaction();
+                cmd.Connection = conexion;
+                cmd.Transaction = t;
+                cmd.CommandType = CommandType.Text;
+                // Establece la instrucción a ejecutar
                 cmd.CommandText = strSql;
-                return cmd.ExecuteNonQuery();
+                //Agregamos a la colección de parámetros del comando los filtros recibidos
+                foreach (var item in parametros)
+                {
+                    cmd.Parameters.AddWithValue(item.Key, item.Value);
+                }
+
+                // Retorna el resultado de ejecutar el comando
+                rtdo = cmd.ExecuteNonQuery();
+                t.Commit();
             }
             catch (Exception ex)
             {
-                throw ex;
+                if (t != null)
+                    t.Rollback();
             }
             finally
             {
-                this.CloseConnection(cnn);
+                // Cierra la conexión 
+                if (conexion.State == ConnectionState.Open)
+                    conexion.Close();
+                conexion.Dispose();
             }
+            return rtdo;
         }
 
         // Resumen:
