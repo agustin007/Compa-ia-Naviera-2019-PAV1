@@ -34,6 +34,7 @@ namespace Compania_naviera.Presentacion
         {
             registro_navios frm_registro_navios = new registro_navios();
             frm_registro_navios.ShowDialog();
+            Btn_consultar_Click(sender, e);
         }
 
         private void Navios_Load(object sender, EventArgs e)
@@ -83,6 +84,22 @@ namespace Compania_naviera.Presentacion
         private void Btn_modificar_Click(object sender, EventArgs e)
         {
             registro_navios frm_registro_navios = new registro_navios();
+            Navio selectedItem = (Navio)dgv_navios.CurrentRow.DataBoundItem;
+            frm_registro_navios.SeleccionarNavio(registro_navios.FormMode.update, selectedItem);
+            frm_registro_navios.ShowDialog();
+        }
+
+        //private object CargarNavio()
+        //{
+        //    Navio oNavio = new Navio();
+
+        //}
+
+        private void Btn_eliminar_Click(object sender, EventArgs e)
+        {
+            registro_navios frm_registro_navios = new registro_navios();
+            var navio = (Navio)dgv_navios.CurrentRow.DataBoundItem;
+            frm_registro_navios.SeleccionarNavio(registro_navios.FormMode.delete, navio);
             frm_registro_navios.ShowDialog();
         }
     }

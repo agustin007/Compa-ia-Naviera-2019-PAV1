@@ -148,6 +148,7 @@
     <Content Include="Recursos\candado.jpg" />
     <Content Include="Recursos\descarga.jpg" />
     <None Include="Recursos\fondo_itinerarios.jpg" />
+    <None Include="Recursos\eliminar.jpg" />
     <Content Include="Recursos\Fondo_principal.jpg" />
     <Content Include="Recursos\navio.jpg" />
   </ItemGroup>

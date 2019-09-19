@@ -64,6 +64,7 @@ namespace Compania_naviera.Presentacion
                     }
                 case FormMode.delete:
                     {
+                        MostrarDatos();
                         this.Text = "Eliminar usuario";
                         txt_codigo.Enabled = false;
                         txt_nombre.Enabled = false;
@@ -75,6 +76,7 @@ namespace Compania_naviera.Presentacion
                         txt_cantiada_pasajeros.Enabled = false;
                         txt_cantidad_tripulantes.Enabled = false;
                         txt_cantidad_motores.Enabled = false;
+                        cmb_tipo.Enabled = false;
                         break;
                     }
             }
@@ -121,6 +123,7 @@ namespace Compania_naviera.Presentacion
                     }
                 case FormMode.update:
                     {
+
                         break;
                     }
 

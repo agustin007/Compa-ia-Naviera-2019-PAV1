@@ -49,6 +49,7 @@
             this.btn_agregar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.Busqueda = new System.Windows.Forms.GroupBox();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_navios)).BeginInit();
             this.Busqueda.SuspendLayout();
             this.SuspendLayout();
@@ -234,12 +235,24 @@
             this.Busqueda.TabStop = false;
             this.Busqueda.Text = "Busqueda";
             // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.BackgroundImage = global::Compania_naviera.Properties.Resources.eliminar;
+            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar.Location = new System.Drawing.Point(184, 330);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(56, 45);
+            this.btn_eliminar.TabIndex = 5;
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
+            // 
             // frm_navios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Compania_naviera.Properties.Resources.navio;
             this.ClientSize = new System.Drawing.Size(707, 384);
+            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.Busqueda);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_agregar);
@@ -279,5 +292,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad_tripulacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo_clasificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad_motores;
+        private System.Windows.Forms.Button btn_eliminar;
     }
 }
