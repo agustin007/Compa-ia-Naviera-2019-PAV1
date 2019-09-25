@@ -72,6 +72,45 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             return DBHelper.getDBHelper().EjecutarSQL(sql, parametros) == 1;
         }
 
+        public bool ModificateNavio(Navio oNavio)
+        {
+            string sql = " UPDATE Navios" +
+                         " SET nombre = @nombre," +
+                         "altura = @altura," +
+                         "autonomia = @autonomia," +
+                         "desplazamiento = @desplazamiento," +
+                         "eslora = @eslora," +
+                         "manga = @manga," +
+                         "cantidad_maxima_pasajeros = @cantidad_maxima_pasajeros," +
+                         "cantidad_tripulantes = @cantidad_tripulantes," +
+                         "cod_clasificacion = @cod_clasificacion," +
+                         "cantidad_motores = @cantidad_motores" +
+                         "WHERE cod_navio = @cod_navio,";
+
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("@cod_navio", oNavio.Codigo);
+            parametros.Add("@nombre", oNavio.Nombre);
+            parametros.Add("@altura", oNavio.Altura);
+            parametros.Add("@autonomia", oNavio.Autonomia);
+            parametros.Add("@desplazamiento", oNavio.Desplazamiento);
+            parametros.Add("@eslora", oNavio.Eslora);
+            parametros.Add("@manga", oNavio.Manga);
+            parametros.Add("@cantidad_maxima_pasajeros", oNavio.Cantidad_pasajeros);
+            parametros.Add("@cantidad_tripulantes", oNavio.Cantidad_tripulacion);
+            parametros.Add("@cod_clasificacion", oNavio.Tipo_clasificacion.CodClasificacion);
+            parametros.Add("@cantidad_motores", oNavio.Cantidad_motores);
+
+            return DBHelper.getDBHelper().EjecutarSQL(sql, parametros) == 1;
+        }
+
+        public bool DeleteNavio(Navio oNavio)
+        {
+            string sql = "";
+            var parametros = new Dictionary<string, object>();
+            return DBHelper.getDBHelper().EjecutarSQL(sql, parametros) == 1;
+
+        }
+
         private Navio MapeoNavios(DataRow row)
         {
             Navio oNavio = new Navio();
@@ -95,5 +134,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             }
             return oNavio;
         }
+
+
     }
 }

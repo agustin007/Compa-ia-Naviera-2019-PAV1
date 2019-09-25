@@ -50,7 +50,7 @@ namespace Compania_naviera.Presentacion
                     {
                         this.Text = "Actualizar usuario";
                         MostrarDatos();
-                        txt_codigo.Enabled = true;
+                        txt_codigo.Enabled = false;
                         txt_nombre.Enabled = true;
                         txt_altura.Enabled = true;
                         txt_autonomia.Enabled = true;
@@ -123,7 +123,23 @@ namespace Compania_naviera.Presentacion
                     }
                 case FormMode.update:
                     {
-
+                        oNavioSeleccionado.Codigo = Convert.ToInt32(txt_codigo.Text);
+                        oNavioSeleccionado.Nombre = txt_nombre.Text;
+                        oNavioSeleccionado.Altura = Convert.ToInt32(txt_altura.Text);
+                        oNavioSeleccionado.Autonomia = Convert.ToInt32(txt_autonomia.Text);
+                        oNavioSeleccionado.Desplazamiento = Convert.ToInt32(txt_desplazamiento.Text);
+                        oNavioSeleccionado.Eslora = Convert.ToInt32(txt_eslora.Text);
+                        oNavioSeleccionado.Manga = Convert.ToInt32(txt_manga.Text);
+                        oNavioSeleccionado.Cantidad_pasajeros = Convert.ToInt32(txt_cantiada_pasajeros.Text);
+                        oNavioSeleccionado.Cantidad_tripulacion = Convert.ToInt32(txt_cantidad_tripulantes.Text);
+                        oNavioSeleccionado.Cantidad_motores = Convert.ToInt32(txt_cantidad_motores.Text);
+                        oNavioSeleccionado.Tipo_clasificacion = new ClasificacionNavio();
+                        oNavioSeleccionado.Tipo_clasificacion.CodClasificacion = (int)cmb_tipo.SelectedValue;
+                        if (servicio.ModificarNavio(oNavioSeleccionado))
+                        {
+                            MessageBox.Show("Navio modificado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
                         break;
                     }
 

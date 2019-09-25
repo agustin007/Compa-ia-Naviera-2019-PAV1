@@ -32,9 +32,14 @@ namespace Compania_naviera.Negocio.Servicios
             return dao.RegistrerNavios(oNavio);
         }
 
-        //public IList<ClasificacionNavio> ObtenerTipoNavio()
-        //{
-        //    return dao.GetNavioTipo();
-        //}
+        public bool ModificarNavio(Navio oNavio)
+        {
+            return dao.ModificateNavio(oNavio);   
+        }
+
+        public bool EliminarNavio(Navio oNavio)
+        {
+            return dao.DeleteNavio(oNavio);
+        }
     }
 }

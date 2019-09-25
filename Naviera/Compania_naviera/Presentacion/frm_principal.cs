@@ -42,6 +42,7 @@ namespace Compania_naviera.Presentacion
             if (resultado == DialogResult.Yes)
             {
                 this.Close();
+                this.Dispose();
             }
         }
 

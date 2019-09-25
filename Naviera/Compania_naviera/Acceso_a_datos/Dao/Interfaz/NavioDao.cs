@@ -13,6 +13,8 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Interfaz
         IList<Navio> GetTodosLosNavios();
 
         bool RegistrerNavios(Navio oNavio);
+        bool ModificateNavio(Navio oNavio);
+        bool DeleteNavio(Navio oNavio);
         //IList<ClasificacionNavio> GetNavioTipo();
     }
 }

@@ -45,7 +45,7 @@ namespace Compania_naviera.Presentacion
 
         private void Btn_consultar_Click(object sender, EventArgs e)
         {
-                if(txt_cod.Text != "")
+            if(txt_cod.Text != "")
             {
                 int codigo = int.Parse(txt_cod.Text);
                 IList<Navio> navios = servicio.ObtenerNavioPorId(codigo);
@@ -58,13 +58,14 @@ namespace Compania_naviera.Presentacion
             }
             else
             {
-                IList<Navio> todos_los_navios = servicio.ObtenerTodosLosNavios();
+                dgv_navios.DataSource = servicio.ObtenerTodosLosNavios();
+                //IList<Navio> todos_los_navios = servicio.ObtenerTodosLosNavios();
 
-                dgv_navios.Rows.Clear();
-                foreach(Navio oTNavio in todos_los_navios)
-                {
-                    dgv_navios.Rows.Add(new object[] { oTNavio.Codigo, oTNavio.Nombre, oTNavio.Altura, oTNavio.Autonomia, oTNavio.Desplazamiento, oTNavio.Eslora, oTNavio.Manga, oTNavio.Cantidad_pasajeros, oTNavio.Cantidad_tripulacion, oTNavio.Tipo_clasificacion, oTNavio.Cantidad_motores });
-                }
+                //dgv_navios.Rows.Clear();
+                //foreach(Navio oTNavio in todos_los_navios)
+                //{
+                //    dgv_navios.Rows.Add(new object[] { oTNavio.Codigo, oTNavio.Nombre, oTNavio.Altura, oTNavio.Autonomia, oTNavio.Desplazamiento, oTNavio.Eslora, oTNavio.Manga, oTNavio.Cantidad_pasajeros, oTNavio.Cantidad_tripulacion, oTNavio.Tipo_clasificacion, oTNavio.Cantidad_motores });
+                //}
             }
         }
 
@@ -84,9 +85,11 @@ namespace Compania_naviera.Presentacion
         private void Btn_modificar_Click(object sender, EventArgs e)
         {
             registro_navios frm_registro_navios = new registro_navios();
-            Navio selectedItem = (Navio)dgv_navios.CurrentRow.DataBoundItem;
-            frm_registro_navios.SeleccionarNavio(registro_navios.FormMode.update, selectedItem);
+
+            var navio = (Navio)dgv_navios.CurrentRow.DataBoundItem;
+            frm_registro_navios.SeleccionarNavio(registro_navios.FormMode.update, navio);
             frm_registro_navios.ShowDialog();
+
         }
 
         //private object CargarNavio()
