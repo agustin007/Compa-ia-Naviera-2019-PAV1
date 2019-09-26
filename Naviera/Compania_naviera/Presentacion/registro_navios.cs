@@ -106,19 +106,6 @@ namespace Compania_naviera.Presentacion
                             MessageBox.Show("Navio insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
-                        //if (txt_codigo.Text != "")
-                        //{
-                        //    bool respuesta = servicio.RegistrarNavio(oNavio);
-                        //    if (respuesta)
-                        //    {
-                        //        MessageBox.Show("La operacion se realizo con exito", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //    }
-                        //    else
-                        //    {
-                        //        MessageBox.Show("La operacion NO se realizo con exito", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //    }
-                        //}
-                        //this.Close();
                         break;
                     }
                 case FormMode.update:

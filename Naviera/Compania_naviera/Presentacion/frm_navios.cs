@@ -45,16 +45,22 @@ namespace Compania_naviera.Presentacion
 
         private void Btn_consultar_Click(object sender, EventArgs e)
         {
-            if(txt_cod.Text != "")
+            var parametros = new Dictionary<string, object>();
+            if (txt_cod.Text != "")
             {
-                int codigo = int.Parse(txt_cod.Text);
-                IList<Navio> navios = servicio.ObtenerNavioPorId(codigo);
-
-                dgv_navios.Rows.Clear();
-                foreach(Navio oNavio in navios)
+                parametros.Add("codNavio", txt_cod.Text);
+                if (parametros.Count > 0)
                 {
-                    dgv_navios.Rows.Add(new object[] {oNavio.Codigo, oNavio.Nombre, oNavio.Altura, oNavio.Autonomia,oNavio.Desplazamiento, oNavio.Eslora, oNavio.Manga, oNavio.Cantidad_pasajeros, oNavio.Cantidad_tripulacion, oNavio.Tipo_clasificacion, oNavio.Cantidad_motores });
+                    dgv_navios.DataSource = servicio.ObtenerNavioPorId(parametros);
                 }
+                //int codigo = int.Parse(txt_cod.Text);
+                //IList<Navio> navios = servicio.ObtenerNavioPorId(codigo);
+
+                //dgv_navios.Rows.Clear();
+                //foreach(Navio oNavio in navios)
+                //{
+                //    dgv_navios.Rows.Add(new object[] {oNavio.Codigo, oNavio.Nombre, oNavio.Altura, oNavio.Autonomia,oNavio.Desplazamiento, oNavio.Eslora, oNavio.Manga, oNavio.Cantidad_pasajeros, oNavio.Cantidad_tripulacion, oNavio.Tipo_clasificacion, oNavio.Cantidad_motores });
+                //}
             }
             else
             {
@@ -89,6 +95,7 @@ namespace Compania_naviera.Presentacion
             var navio = (Navio)dgv_navios.CurrentRow.DataBoundItem;
             frm_registro_navios.SeleccionarNavio(registro_navios.FormMode.update, navio);
             frm_registro_navios.ShowDialog();
+            Btn_consultar_Click(sender, e);
 
         }
 

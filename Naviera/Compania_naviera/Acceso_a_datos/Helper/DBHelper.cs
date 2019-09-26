@@ -36,30 +36,7 @@ namespace Compania_naviera.Acceso_a_datos.Helper
         //              a) durante la apertura de la conexión
         //              b) durante la ejecución del comando.
 
-        //public int ejecutarSQL(string strSql)
-        //{
-
-        //    SqlConnection cnn = new SqlConnection();
-        //    SqlCommand cmd = new SqlCommand();
-
-        //    try
-        //    {
-        //        cnn.ConnectionString = cadena_conexion;
-        //        cnn.Open();
-
-        //        cmd.Connection = cnn;
-        //        cmd.CommandText = strSql;
-        //        return cmd.ExecuteNonQuery();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        this.CloseConnection(cnn);
-        //    }
-        //}
+        
         public int EjecutarSQL(string strSql, Dictionary<string, object> parametros = null)
         {
             // Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”
@@ -156,13 +133,12 @@ namespace Compania_naviera.Acceso_a_datos.Helper
         //              a) durante la apertura de la conexión
         //              b) durante la ejecución del comando.
 
-        public DataTable ConsultarSQLConParametros(string sqlStr, Object[] prs)
+        public DataTable ConsultaSQLConParametros(string sqlStr, Dictionary<string, object> prs)
         {
             SqlConnection cnn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             DataTable tabla = new DataTable();
 
-            string n_param;
             try
             {
                 cnn.ConnectionString = cadena_conexion;
@@ -173,13 +149,10 @@ namespace Compania_naviera.Acceso_a_datos.Helper
                 cmd.CommandText = sqlStr;
 
                 //Agregamos a la colección de parámetros del comando los filtros recibidos
-                //IMPORTANTE: cada parametro deberá llamarse: param1, param2,.., paramN
-                for (int i = 0; i < prs.Length; i++)
-                    if (prs[i] != null)
-                    {
-                        n_param = "param" + Convert.ToString(i + 1);
-                        cmd.Parameters.AddWithValue(n_param, prs[i]);
-                    }
+                foreach (var item in prs)
+                {
+                    cmd.Parameters.AddWithValue(item.Key, item.Value);
+                }
 
                 tabla.Load(cmd.ExecuteReader());
                 return tabla;
@@ -193,6 +166,7 @@ namespace Compania_naviera.Acceso_a_datos.Helper
                 CloseConnection(cnn);
             }
         }
+
 
         private void CloseConnection(SqlConnection cnn)
         {

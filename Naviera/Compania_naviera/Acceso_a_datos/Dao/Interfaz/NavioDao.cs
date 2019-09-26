@@ -8,7 +8,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Interfaz
 {
     public interface NavioDao<T>
     {
-        IList<Navio> GetNavioById(int id);
+        IList<Navio> GetNavioById(Dictionary<string, object> parametros);
 
         IList<Navio> GetTodosLosNavios();
 

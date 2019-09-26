@@ -41,8 +41,7 @@ namespace Compania_naviera.Presentacion
             var resultado = MessageBox.Show(string.Concat("Esta seguro que desea salir "), "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
-                this.Close();
-                this.Dispose();
+                Environment.Exit(0);
             }
         }
 

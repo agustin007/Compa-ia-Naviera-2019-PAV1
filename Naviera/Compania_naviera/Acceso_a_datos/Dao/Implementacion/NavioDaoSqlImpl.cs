@@ -14,24 +14,27 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
     {
         public NavioDaoSqlImpl() { }
 
-        public IList<Navio> GetNavioById(int id)
+        public IList<Navio> GetNavioById(Dictionary<string, object> parametros)
         {
             List<Navio> lista = new List<Navio>();
 
-            string sql = @"SELECT t.*,t1.descripcion " +
-                          "FROM Navios t, Clasificacion_navio t1 " +
-                          "WHERE cod_navio = " + id.ToString() +
-                          " AND t.tipo_clasificacion = cod_clasificacion";
-            DataTable resultado = DBHelper.getDBHelper().ConsultaSQL(sql);
+            string sql = string.Concat(@"SELECT t.*,t1.descripcion ",
+                          "FROM Navios t, Clasificacion_navio t1 ",
+                          "WHERE t.tipo_clasificacion = cod_clasificacion");
 
-            foreach(DataRow row in resultado.Rows)
+            if (parametros.ContainsKey("codNavio"))
+                sql += " AND (t.cod_navio = @codNavio )";
+
+            DataTable resultado = DBHelper.getDBHelper().ConsultaSQLConParametros(sql, parametros);
+
+            foreach (DataRow row in resultado.Rows)
             {
                 lista.Add(MapeoNavios(row));
             }
 
             return lista;
         }
-                
+
         public IList<Navio> GetTodosLosNavios()
         {
             List<Navio> lista = new List<Navio>();
@@ -54,12 +57,12 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
 
             string sql = "INSERT INTO Navios(cod_navio, nombre, altura, " +
                              "autonomia, desplazamiento, eslora, manga," +
-                             "cantidad_maxima_pasajeros, cantidad_tripulantes," +
+                             "cantidad_maxima_pasajeros, cantidad_tripulantes," +   
                              " tipo_clasificacion, cantidad_motores)" +
                              "VALUES (@cod_navio, @nombre, @altura, @autonomia, @desplazamiento, @eslora, @manga, @cantidad_maxima_pasajeros, @cantidad_tripulantes, @cod_clasificacion, @cantidad_motores)";
             var parametros = new Dictionary<string, object>();
-            parametros.Add("@cod_navio",oNavio.Codigo);
-            parametros.Add("@nombre",oNavio.Nombre);
+            parametros.Add("@cod_navio", oNavio.Codigo);
+            parametros.Add("@nombre", oNavio.Nombre);
             parametros.Add("@altura", oNavio.Altura);
             parametros.Add("@autonomia", oNavio.Autonomia);
             parametros.Add("@desplazamiento", oNavio.Desplazamiento);
@@ -83,9 +86,9 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
                          "manga = @manga," +
                          "cantidad_maxima_pasajeros = @cantidad_maxima_pasajeros," +
                          "cantidad_tripulantes = @cantidad_tripulantes," +
-                         "cod_clasificacion = @cod_clasificacion," +
+                         "tipo_clasificacion = @cod_clasificacion," +
                          "cantidad_motores = @cantidad_motores" +
-                         "WHERE cod_navio = @cod_navio,";
+                         " WHERE cod_navio = @cod_navio";
 
             var parametros = new Dictionary<string, object>();
             parametros.Add("@cod_navio", oNavio.Codigo);

@@ -17,9 +17,9 @@ namespace Compania_naviera.Negocio.Servicios
         {
             dao = new NavioDaoSqlImpl();
         }
-        public IList<Navio> ObtenerNavioPorId(int id)
+        public IList<Navio> ObtenerNavioPorId(Dictionary<string,object> parametros)
         {
-            return dao.GetNavioById(id);
+            return dao.GetNavioById(parametros);
         }
 
         public IList<Navio> ObtenerTodosLosNavios()

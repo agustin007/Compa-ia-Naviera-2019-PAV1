@@ -33,17 +33,6 @@
             this.cmb_tipo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_navios = new System.Windows.Forms.DataGridView();
-            this.codigo_navio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autonomia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.desplazamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eslora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manga = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad_pasajeros = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad_tripulacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_clasificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad_motores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_consultar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_agregar = new System.Windows.Forms.Button();
@@ -92,90 +81,12 @@
             this.dgv_navios.AllowUserToAddRows = false;
             this.dgv_navios.AllowUserToDeleteRows = false;
             this.dgv_navios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_navios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo_navio,
-            this.nombre,
-            this.altura,
-            this.autonomia,
-            this.desplazamiento,
-            this.eslora,
-            this.manga,
-            this.cantidad_pasajeros,
-            this.cantidad_tripulacion,
-            this.tipo_clasificacion,
-            this.cantidad_motores});
             this.dgv_navios.Location = new System.Drawing.Point(26, 97);
             this.dgv_navios.Name = "dgv_navios";
             this.dgv_navios.ReadOnly = true;
             this.dgv_navios.Size = new System.Drawing.Size(644, 210);
             this.dgv_navios.TabIndex = 1;
             this.dgv_navios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_navios_CellClick);
-            // 
-            // codigo_navio
-            // 
-            this.codigo_navio.HeaderText = "Codigo";
-            this.codigo_navio.Name = "codigo_navio";
-            this.codigo_navio.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // altura
-            // 
-            this.altura.HeaderText = "Altura";
-            this.altura.Name = "altura";
-            this.altura.ReadOnly = true;
-            // 
-            // autonomia
-            // 
-            this.autonomia.HeaderText = "Autonomia";
-            this.autonomia.Name = "autonomia";
-            this.autonomia.ReadOnly = true;
-            // 
-            // desplazamiento
-            // 
-            this.desplazamiento.HeaderText = "Desplazamiento";
-            this.desplazamiento.Name = "desplazamiento";
-            this.desplazamiento.ReadOnly = true;
-            // 
-            // eslora
-            // 
-            this.eslora.HeaderText = "Eslora";
-            this.eslora.Name = "eslora";
-            this.eslora.ReadOnly = true;
-            // 
-            // manga
-            // 
-            this.manga.HeaderText = "Manga";
-            this.manga.Name = "manga";
-            this.manga.ReadOnly = true;
-            // 
-            // cantidad_pasajeros
-            // 
-            this.cantidad_pasajeros.HeaderText = "Cantidad Pasajeros";
-            this.cantidad_pasajeros.Name = "cantidad_pasajeros";
-            this.cantidad_pasajeros.ReadOnly = true;
-            // 
-            // cantidad_tripulacion
-            // 
-            this.cantidad_tripulacion.HeaderText = "Cantidad Tripulacion";
-            this.cantidad_tripulacion.Name = "cantidad_tripulacion";
-            this.cantidad_tripulacion.ReadOnly = true;
-            // 
-            // tipo_clasificacion
-            // 
-            this.tipo_clasificacion.HeaderText = "Clasificacion";
-            this.tipo_clasificacion.Name = "tipo_clasificacion";
-            this.tipo_clasificacion.ReadOnly = true;
-            // 
-            // cantidad_motores
-            // 
-            this.cantidad_motores.HeaderText = "Motores";
-            this.cantidad_motores.Name = "cantidad_motores";
-            this.cantidad_motores.ReadOnly = true;
             // 
             // btn_consultar
             // 
@@ -281,17 +192,6 @@
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.GroupBox Busqueda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo_navio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn altura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn autonomia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn desplazamiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eslora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manga;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad_pasajeros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad_tripulacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_clasificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad_motores;
         private System.Windows.Forms.Button btn_eliminar;
     }
 }
