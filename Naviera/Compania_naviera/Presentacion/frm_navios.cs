@@ -39,6 +39,7 @@ namespace Compania_naviera.Presentacion
 
         private void Navios_Load(object sender, EventArgs e)
         {
+            btn_eliminar.Enabled = false;
             btn_modificar.Enabled = false;
             llenarCombo(cmb_tipo, clasificacion_servicio.ObtenerTipoNavio(), "Descripcion", "CodClasificacion");
         }
@@ -86,6 +87,7 @@ namespace Compania_naviera.Presentacion
         private void Dgv_navios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btn_modificar.Enabled = true;
+            btn_eliminar.Enabled = true;
         }
 
         private void Btn_modificar_Click(object sender, EventArgs e)

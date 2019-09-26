@@ -87,7 +87,8 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
                          "cantidad_maxima_pasajeros = @cantidad_maxima_pasajeros," +
                          "cantidad_tripulantes = @cantidad_tripulantes," +
                          "tipo_clasificacion = @cod_clasificacion," +
-                         "cantidad_motores = @cantidad_motores" +
+                         "cantidad_motores = @cantidad_motores," +
+                         "estado = @estado" +
                          " WHERE cod_navio = @cod_navio";
 
             var parametros = new Dictionary<string, object>();
@@ -102,19 +103,12 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             parametros.Add("@cantidad_tripulantes", oNavio.Cantidad_tripulacion);
             parametros.Add("@cod_clasificacion", oNavio.Tipo_clasificacion.CodClasificacion);
             parametros.Add("@cantidad_motores", oNavio.Cantidad_motores);
+            parametros.Add("@estado", oNavio.Estado);
 
             return DBHelper.getDBHelper().EjecutarSQL(sql, parametros) == 1;
         }
 
-        public bool DeleteNavio(Navio oNavio)
-        {
-            string sql = "";
-            var parametros = new Dictionary<string, object>();
-            return DBHelper.getDBHelper().EjecutarSQL(sql, parametros) == 1;
-
-        }
-
-        private Navio MapeoNavios(DataRow row)
+         private Navio MapeoNavios(DataRow row)
         {
             Navio oNavio = new Navio();
             {

@@ -132,6 +132,16 @@ namespace Compania_naviera.Presentacion
 
                 case FormMode.delete:
                     {
+                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el usuario seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        {
+                            if (servicio.ModificarEstadoNavio(oNavioSeleccionado))
+                            {
+                                MessageBox.Show("Usuario Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                         break;
                     }
             }

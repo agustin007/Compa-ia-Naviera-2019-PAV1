@@ -84,6 +84,7 @@
             this.dgv_navios.Location = new System.Drawing.Point(26, 97);
             this.dgv_navios.Name = "dgv_navios";
             this.dgv_navios.ReadOnly = true;
+            this.dgv_navios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_navios.Size = new System.Drawing.Size(644, 210);
             this.dgv_navios.TabIndex = 1;
             this.dgv_navios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_navios_CellClick);

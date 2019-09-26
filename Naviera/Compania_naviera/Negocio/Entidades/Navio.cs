@@ -20,6 +20,8 @@ namespace Compania_naviera.Negocio.Entidades
         public ClasificacionNavio Tipo_clasificacion { get; set; }
         public int Cantidad_motores { get; set; }
 
+        public string Estado { get; set; }
+
         public Navio() { }
     }
 }

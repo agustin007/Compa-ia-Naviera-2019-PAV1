@@ -37,9 +37,13 @@ namespace Compania_naviera.Negocio.Servicios
             return dao.ModificateNavio(oNavio);   
         }
 
-        public bool EliminarNavio(Navio oNavio)
+        public bool ModificarEstadoNavio(Navio oNavio)
         {
-            return dao.DeleteNavio(oNavio);
+            if (oNavio.Estado == "N")
+                oNavio.Estado = "S";
+            else
+                oNavio.Estado = "N";
+            return dao.ModificateNavio(oNavio);
         }
     }
 }
