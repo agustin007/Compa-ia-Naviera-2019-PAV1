@@ -79,15 +79,15 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
         {
             string sql = " UPDATE Navios" +
                          " SET nombre = @nombre," +
-                         "altura = @altura," +
-                         "autonomia = @autonomia," +
-                         "desplazamiento = @desplazamiento," +
-                         "eslora = @eslora," +
-                         "manga = @manga," +
-                         "cantidad_maxima_pasajeros = @cantidad_maxima_pasajeros," +
-                         "cantidad_tripulantes = @cantidad_tripulantes," +
-                         "tipo_clasificacion = @cod_clasificacion," +
-                         "cantidad_motores = @cantidad_motores," +
+                         " altura = @altura," +
+                         " autonomia = @autonomia," +
+                         " desplazamiento = @desplazamiento," +
+                         " eslora = @eslora," +
+                         " manga = @manga," +
+                         " cantidad_maxima_pasajeros = @cantidad_maxima_pasajeros," +
+                         " cantidad_tripulantes = @cantidad_tripulantes," +
+                         " tipo_clasificacion = @cod_clasificacion," +
+                         " cantidad_motores = @cantidad_motores," +
                          "estado = @estado" +
                          " WHERE cod_navio = @cod_navio";
 

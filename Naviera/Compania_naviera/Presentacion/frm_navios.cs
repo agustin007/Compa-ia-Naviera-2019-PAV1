@@ -93,7 +93,6 @@ namespace Compania_naviera.Presentacion
         private void Btn_modificar_Click(object sender, EventArgs e)
         {
             registro_navios frm_registro_navios = new registro_navios();
-
             var navio = (Navio)dgv_navios.CurrentRow.DataBoundItem;
             frm_registro_navios.SeleccionarNavio(registro_navios.FormMode.update, navio);
             frm_registro_navios.ShowDialog();

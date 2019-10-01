@@ -52,6 +52,8 @@
             this.cmb_tipo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_aceptar = new System.Windows.Forms.Button();
+            this.txt_estado = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -234,6 +236,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.txt_estado);
             this.groupBox1.Controls.Add(this.btn_aceptar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cmb_tipo);
@@ -273,6 +277,23 @@
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.Btn_aceptar_Click);
+            // 
+            // txt_estado
+            // 
+            this.txt_estado.Enabled = false;
+            this.txt_estado.Location = new System.Drawing.Point(327, 170);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(84, 20);
+            this.txt_estado.TabIndex = 23;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(278, 173);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 13);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "Estado:";
             // 
             // registro_navios
             // 
@@ -317,5 +338,7 @@
         private System.Windows.Forms.ComboBox cmb_tipo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_aceptar;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txt_estado;
     }
 }

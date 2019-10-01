@@ -122,6 +122,8 @@ namespace Compania_naviera.Presentacion
                         oNavioSeleccionado.Cantidad_motores = Convert.ToInt32(txt_cantidad_motores.Text);
                         oNavioSeleccionado.Tipo_clasificacion = new ClasificacionNavio();
                         oNavioSeleccionado.Tipo_clasificacion.CodClasificacion = (int)cmb_tipo.SelectedValue;
+                        oNavioSeleccionado.Estado = txt_estado.Text;
+
                         if (servicio.ModificarNavio(oNavioSeleccionado))
                         {
                             MessageBox.Show("Navio modificado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
