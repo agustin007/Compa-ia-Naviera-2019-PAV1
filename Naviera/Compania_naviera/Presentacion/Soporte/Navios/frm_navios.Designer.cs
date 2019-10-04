@@ -38,6 +38,9 @@
             this.btn_agregar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.Busqueda = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.chk_todos = new System.Windows.Forms.CheckBox();
             this.btn_eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_navios)).BeginInit();
             this.Busqueda.SuspendLayout();
@@ -46,7 +49,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 24);
+            this.label1.Location = new System.Drawing.Point(15, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
@@ -54,7 +57,7 @@
             // 
             // txt_cod
             // 
-            this.txt_cod.Location = new System.Drawing.Point(93, 21);
+            this.txt_cod.Location = new System.Drawing.Point(93, 47);
             this.txt_cod.Name = "txt_cod";
             this.txt_cod.Size = new System.Drawing.Size(121, 20);
             this.txt_cod.TabIndex = 1;
@@ -62,7 +65,7 @@
             // cmb_tipo
             // 
             this.cmb_tipo.FormattingEnabled = true;
-            this.cmb_tipo.Location = new System.Drawing.Point(352, 21);
+            this.cmb_tipo.Location = new System.Drawing.Point(290, 21);
             this.cmb_tipo.Name = "cmb_tipo";
             this.cmb_tipo.Size = new System.Drawing.Size(121, 21);
             this.cmb_tipo.TabIndex = 3;
@@ -70,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(271, 24);
+            this.label2.Location = new System.Drawing.Point(209, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 2;
@@ -81,7 +84,7 @@
             this.dgv_navios.AllowUserToAddRows = false;
             this.dgv_navios.AllowUserToDeleteRows = false;
             this.dgv_navios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_navios.Location = new System.Drawing.Point(26, 97);
+            this.dgv_navios.Location = new System.Drawing.Point(26, 111);
             this.dgv_navios.Name = "dgv_navios";
             this.dgv_navios.ReadOnly = true;
             this.dgv_navios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -135,6 +138,9 @@
             // 
             // Busqueda
             // 
+            this.Busqueda.Controls.Add(this.label3);
+            this.Busqueda.Controls.Add(this.txt_nombre);
+            this.Busqueda.Controls.Add(this.chk_todos);
             this.Busqueda.Controls.Add(this.btn_consultar);
             this.Busqueda.Controls.Add(this.label1);
             this.Busqueda.Controls.Add(this.label2);
@@ -142,10 +148,37 @@
             this.Busqueda.Controls.Add(this.cmb_tipo);
             this.Busqueda.Location = new System.Drawing.Point(26, 27);
             this.Busqueda.Name = "Busqueda";
-            this.Busqueda.Size = new System.Drawing.Size(644, 64);
+            this.Busqueda.Size = new System.Drawing.Size(644, 78);
             this.Busqueda.TabIndex = 0;
             this.Busqueda.TabStop = false;
             this.Busqueda.Text = "Busqueda";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(37, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Nombre: ";
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Location = new System.Drawing.Point(93, 21);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(100, 20);
+            this.txt_nombre.TabIndex = 6;
+            // 
+            // chk_todos
+            // 
+            this.chk_todos.AutoSize = true;
+            this.chk_todos.Location = new System.Drawing.Point(447, 23);
+            this.chk_todos.Name = "chk_todos";
+            this.chk_todos.Size = new System.Drawing.Size(105, 17);
+            this.chk_todos.TabIndex = 5;
+            this.chk_todos.Text = "Todos(con los F)";
+            this.chk_todos.UseVisualStyleBackColor = true;
+            this.chk_todos.CheckedChanged += new System.EventHandler(this.Chk_todos_CheckedChanged);
             // 
             // btn_eliminar
             // 
@@ -163,6 +196,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Compania_naviera.Properties.Resources.navio;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(707, 384);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.Busqueda);
@@ -194,5 +228,8 @@
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.GroupBox Busqueda;
         private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.CheckBox chk_todos;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_nombre;
     }
 }

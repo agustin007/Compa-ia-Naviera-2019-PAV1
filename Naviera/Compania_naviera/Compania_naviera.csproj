@@ -60,16 +60,16 @@
     <Compile Include="Negocio\Servicios\ClasificacionNavioServicio.cs" />
     <Compile Include="Negocio\Servicios\ItinerarioServicio.cs" />
     <Compile Include="Negocio\Servicios\NavioServicio.cs" />
-    <Compile Include="Presentacion\frm_itinerarios.cs">
+    <Compile Include="Presentacion\Soporte\Itinerarios\frm_itinerarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frm_itinerarios.Designer.cs">
+    <Compile Include="Presentacion\Soporte\Itinerarios\frm_itinerarios.Designer.cs">
       <DependentUpon>frm_itinerarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frm_navios.cs">
+    <Compile Include="Presentacion\Soporte\Navios\frm_navios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frm_navios.Designer.cs">
+    <Compile Include="Presentacion\Soporte\Navios\frm_navios.Designer.cs">
       <DependentUpon>frm_navios.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_principal.cs">
@@ -84,24 +84,36 @@
     <Compile Include="Presentacion\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\registro_itinerarios.cs">
+    <Compile Include="Presentacion\Soporte\Itinerarios\registro_itinerarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\registro_itinerarios.Designer.cs">
+    <Compile Include="Presentacion\Soporte\Itinerarios\registro_itinerarios.Designer.cs">
       <DependentUpon>registro_itinerarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\registro_navios.cs">
+    <Compile Include="Presentacion\Soporte\Navios\registro_navios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\registro_navios.Designer.cs">
+    <Compile Include="Presentacion\Soporte\Navios\registro_navios.Designer.cs">
       <DependentUpon>registro_navios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Soporte\Tripulacion\frm_ABM_tripulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Soporte\Tripulacion\frm_ABM_tripulacion.Designer.cs">
+      <DependentUpon>frm_ABM_tripulacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Soporte\Tripulacion\frm_tripulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Soporte\Tripulacion\frm_tripulacion.Designer.cs">
+      <DependentUpon>frm_tripulacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\frm_itinerarios.resx">
+    <EmbeddedResource Include="Presentacion\Soporte\Itinerarios\frm_itinerarios.resx">
       <DependentUpon>frm_itinerarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frm_navios.resx">
+    <EmbeddedResource Include="Presentacion\Soporte\Navios\frm_navios.resx">
       <DependentUpon>frm_navios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_principal.resx">
@@ -110,11 +122,17 @@
     <EmbeddedResource Include="Presentacion\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\registro_itinerarios.resx">
+    <EmbeddedResource Include="Presentacion\Soporte\Itinerarios\registro_itinerarios.resx">
       <DependentUpon>registro_itinerarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\registro_navios.resx">
+    <EmbeddedResource Include="Presentacion\Soporte\Navios\registro_navios.resx">
       <DependentUpon>registro_navios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Soporte\Tripulacion\frm_ABM_tripulacion.resx">
+      <DependentUpon>frm_ABM_tripulacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Soporte\Tripulacion\frm_tripulacion.resx">
+      <DependentUpon>frm_tripulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,6 +168,7 @@
     <None Include="Recursos\fondo_itinerarios.jpg" />
     <None Include="Recursos\eliminar.jpg" />
     <Content Include="Recursos\Fondo_principal.jpg" />
+    <None Include="Recursos\fondo_tripulacion.jpg" />
     <Content Include="Recursos\navio.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

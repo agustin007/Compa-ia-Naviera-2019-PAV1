@@ -77,6 +77,7 @@
             // 
             this.txt_password.Location = new System.Drawing.Point(228, 80);
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(126, 20);
             this.txt_password.TabIndex = 3;
             // 
@@ -98,12 +99,14 @@
             this.btn_salir.TabIndex = 5;
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Compania_naviera.Properties.Resources.descarga;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(404, 202);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_ingresar);

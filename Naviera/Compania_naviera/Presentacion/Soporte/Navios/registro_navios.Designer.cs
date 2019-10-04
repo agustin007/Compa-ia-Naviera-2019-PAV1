@@ -51,9 +51,9 @@
             this.txt_cantidad_motores = new System.Windows.Forms.TextBox();
             this.cmb_tipo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_aceptar = new System.Windows.Forms.Button();
-            this.txt_estado = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txt_estado = new System.Windows.Forms.TextBox();
+            this.btn_aceptar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -268,6 +268,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Navios";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(278, 173);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 13);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "Estado:";
+            // 
+            // txt_estado
+            // 
+            this.txt_estado.Enabled = false;
+            this.txt_estado.Location = new System.Drawing.Point(327, 170);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(84, 20);
+            this.txt_estado.TabIndex = 23;
+            // 
             // btn_aceptar
             // 
             this.btn_aceptar.Location = new System.Drawing.Point(433, 164);
@@ -278,28 +295,12 @@
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.Btn_aceptar_Click);
             // 
-            // txt_estado
-            // 
-            this.txt_estado.Enabled = false;
-            this.txt_estado.Location = new System.Drawing.Point(327, 170);
-            this.txt_estado.Name = "txt_estado";
-            this.txt_estado.Size = new System.Drawing.Size(84, 20);
-            this.txt_estado.TabIndex = 23;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(278, 173);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 13);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "Estado:";
-            // 
             // registro_navios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Compania_naviera.Properties.Resources.navio;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(708, 302);
             this.Controls.Add(this.groupBox1);
             this.Name = "registro_navios";

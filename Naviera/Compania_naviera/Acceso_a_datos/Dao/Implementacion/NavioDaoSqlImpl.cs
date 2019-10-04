@@ -25,6 +25,12 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             if (parametros.ContainsKey("codNavio"))
                 sql += " AND (t.cod_navio = @codNavio )";
 
+            if (parametros.ContainsKey("Nombre"))
+                sql += " AND (t.nombre LIKE '%' + @Nombre + '%') ";
+
+            if (parametros.ContainsKey("tipoClasificacion"))
+                sql += " AND (t.tipo_clasificacion = @tipoClasificacion )";
+
             DataTable resultado = DBHelper.getDBHelper().ConsultaSQLConParametros(sql, parametros);
 
             foreach (DataRow row in resultado.Rows)
@@ -128,6 +134,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
                     Descripcion = row["descripcion"].ToString(),
                 };
                 oNavio.Cantidad_motores = Convert.ToInt32(row["cantidad_motores"].ToString());
+                oNavio.Estado = row["estado"].ToString();
             }
             return oNavio;
         }

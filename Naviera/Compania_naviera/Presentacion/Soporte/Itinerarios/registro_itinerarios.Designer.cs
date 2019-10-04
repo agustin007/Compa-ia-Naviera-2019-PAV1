@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_codigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_descripcion = new System.Windows.Forms.TextBox();
+            this.txt_categoria = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -48,12 +48,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo itinerario:";
             // 
-            // textBox1
+            // txt_codigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 20);
-            this.textBox1.TabIndex = 1;
+            this.txt_codigo.Location = new System.Drawing.Point(108, 16);
+            this.txt_codigo.Name = "txt_codigo";
+            this.txt_codigo.Size = new System.Drawing.Size(114, 20);
+            this.txt_codigo.TabIndex = 1;
             // 
             // label2
             // 
@@ -73,28 +73,28 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Categoria:";
             // 
-            // textBox2
+            // txt_descripcion
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 20);
-            this.textBox2.TabIndex = 1;
+            this.txt_descripcion.Location = new System.Drawing.Point(108, 40);
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(114, 20);
+            this.txt_descripcion.TabIndex = 1;
             // 
-            // textBox3
+            // txt_categoria
             // 
-            this.textBox3.Location = new System.Drawing.Point(108, 65);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 20);
-            this.textBox3.TabIndex = 1;
+            this.txt_categoria.Location = new System.Drawing.Point(108, 65);
+            this.txt_categoria.Name = "txt_categoria";
+            this.txt_categoria.Size = new System.Drawing.Size(114, 20);
+            this.txt_categoria.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btn_aceptar);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_categoria);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_descripcion);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_codigo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(45, 41);
             this.groupBox1.Name = "groupBox1";
@@ -111,6 +111,7 @@
             this.btn_aceptar.TabIndex = 3;
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.Btn_aceptar_Click);
             // 
             // registro_itinerarios
             // 
@@ -118,11 +119,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Compania_naviera.Properties.Resources.fondo_itinerarios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(338, 227);
+            this.ClientSize = new System.Drawing.Size(342, 235);
             this.Controls.Add(this.groupBox1);
             this.Name = "registro_itinerarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "registro_itinerarios";
+            this.Load += new System.EventHandler(this.Registro_itinerarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -132,11 +134,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_codigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_descripcion;
+        private System.Windows.Forms.TextBox txt_categoria;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_aceptar;
     }

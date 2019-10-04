@@ -8,9 +8,9 @@ namespace Compania_naviera.Negocio.Entidades
 {
     public class Itinerario
     {
-        public int Id { get; set; }
+        public int Codigo { get; set; }
         public string Descripcion { get; set; }
-        public string Categoria { get; set; }
+        public int Categoria { get; set; }
         public Itinerario() { }
     }
 }

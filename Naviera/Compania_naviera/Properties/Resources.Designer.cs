@@ -183,6 +183,16 @@ namespace Compania_naviera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo_tripulacion {
+            get {
+                object obj = ResourceManager.GetObject("fondo_tripulacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap navio {
             get {
                 object obj = ResourceManager.GetObject("navio", resourceCulture);

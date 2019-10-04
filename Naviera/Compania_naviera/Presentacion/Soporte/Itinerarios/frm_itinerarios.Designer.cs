@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_codigo = new System.Windows.Forms.TextBox();
+            this.txt_categoria = new System.Windows.Forms.TextBox();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_itinerarios = new System.Windows.Forms.DataGridView();
-            this.id_itinerario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_itinerarios)).BeginInit();
             this.SuspendLayout();
@@ -48,16 +46,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(17, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo itinerario:";
+            this.label1.Text = "Categoria:";
             // 
-            // txt_codigo
+            // txt_categoria
             // 
-            this.txt_codigo.Location = new System.Drawing.Point(108, 21);
-            this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(109, 20);
-            this.txt_codigo.TabIndex = 1;
+            this.txt_categoria.Location = new System.Drawing.Point(94, 21);
+            this.txt_categoria.Name = "txt_categoria";
+            this.txt_categoria.Size = new System.Drawing.Size(162, 20);
+            this.txt_categoria.TabIndex = 1;
             // 
             // btn_buscar
             // 
@@ -74,7 +72,7 @@
             // 
             this.groupBox1.Controls.Add(this.btn_buscar);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txt_codigo);
+            this.groupBox1.Controls.Add(this.txt_categoria);
             this.groupBox1.Location = new System.Drawing.Point(29, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(343, 60);
@@ -87,33 +85,13 @@
             this.dgv_itinerarios.AllowUserToAddRows = false;
             this.dgv_itinerarios.AllowUserToDeleteRows = false;
             this.dgv_itinerarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_itinerarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_itinerario,
-            this.descripcion,
-            this.categoria});
             this.dgv_itinerarios.Location = new System.Drawing.Point(29, 98);
             this.dgv_itinerarios.Name = "dgv_itinerarios";
             this.dgv_itinerarios.ReadOnly = true;
+            this.dgv_itinerarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_itinerarios.Size = new System.Drawing.Size(343, 161);
             this.dgv_itinerarios.TabIndex = 4;
-            // 
-            // id_itinerario
-            // 
-            this.id_itinerario.HeaderText = "Itinerario";
-            this.id_itinerario.Name = "id_itinerario";
-            this.id_itinerario.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // categoria
-            // 
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
+            this.dgv_itinerarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_itinerarios_CellClick);
             // 
             // btn_salir
             // 
@@ -130,7 +108,7 @@
             // 
             this.btn_agregar.BackgroundImage = global::Compania_naviera.Properties.Resources.btn_nuevo1;
             this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar.Location = new System.Drawing.Point(29, 276);
+            this.btn_agregar.Location = new System.Drawing.Point(29, 277);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(56, 47);
             this.btn_agregar.TabIndex = 5;
@@ -142,18 +120,33 @@
             this.btn_modificar.BackgroundImage = global::Compania_naviera.Properties.Resources.btn_modificar;
             this.btn_modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_modificar.Enabled = false;
-            this.btn_modificar.Location = new System.Drawing.Point(190, 276);
+            this.btn_modificar.Location = new System.Drawing.Point(91, 278);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(56, 48);
+            this.btn_modificar.Size = new System.Drawing.Size(56, 46);
             this.btn_modificar.TabIndex = 6;
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.BackgroundImage = global::Compania_naviera.Properties.Resources.eliminar;
+            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar.Enabled = false;
+            this.btn_eliminar.Location = new System.Drawing.Point(153, 278);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(53, 46);
+            this.btn_eliminar.TabIndex = 8;
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // frm_itinerarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Compania_naviera.Properties.Resources.fondo_itinerarios;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(399, 350);
+            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.btn_modificar);
@@ -172,15 +165,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_codigo;
+        private System.Windows.Forms.TextBox txt_categoria;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgv_itinerarios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_itinerario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.Button btn_eliminar;
     }
 }

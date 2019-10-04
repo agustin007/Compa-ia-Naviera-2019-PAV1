@@ -39,10 +39,10 @@ namespace Compania_naviera.Negocio.Servicios
 
         public bool ModificarEstadoNavio(Navio oNavio)
         {
-            if (oNavio.Estado == "N")
-                oNavio.Estado = "S";
+            if (oNavio.Estado == "false")
+                oNavio.Estado = "true";
             else
-                oNavio.Estado = "N";
+                oNavio.Estado = "false";
             return dao.ModificateNavio(oNavio);
         }
     }

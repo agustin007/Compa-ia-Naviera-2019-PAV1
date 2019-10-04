@@ -17,10 +17,25 @@ namespace Compania_naviera.Negocio.Servicios
         {
             dao = new ItinerarioDaoSqlImpl(); 
         }
-
-        public IList<Itinerario> obtenerItinerarioPorId(int id)
+        
+        public object obtenerItinerarioPorCategoria(Dictionary<string, object> parametros)
         {
-            return dao.getItinerarioById(id);
+            return dao.GetItinerarioByCategoria(parametros);
+        }
+
+        internal bool RegistrarItinerario(Itinerario oItinierario)
+        {
+            return dao.RegistrerItinerario(oItinierario);
+        }
+
+        public IList<Itinerario> ObtenerTodosLosItinerarios()
+        {
+            return dao.GetTodosLosItinerarios();
+        }
+
+        public bool ModificarItinerario(Itinerario oItinerario)
+        {
+            return dao.ModificateItinerario(oItinerario);
         }
     }
 }

@@ -74,5 +74,10 @@ namespace Compania_naviera.Presentacion
             return usuarioValido;
 
         }
+
+        private void Btn_salir_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

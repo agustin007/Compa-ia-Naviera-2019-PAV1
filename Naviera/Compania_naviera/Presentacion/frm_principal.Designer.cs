@@ -83,6 +83,7 @@
             this.tripulacionToolStripMenuItem.Name = "tripulacionToolStripMenuItem";
             this.tripulacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tripulacionToolStripMenuItem.Text = "Tripulacion";
+            this.tripulacionToolStripMenuItem.Click += new System.EventHandler(this.TripulacionToolStripMenuItem_Click);
             // 
             // organizacionToolStripMenuItem
             // 
@@ -96,13 +97,13 @@
             // itinerariosToolStripMenuItem
             // 
             this.itinerariosToolStripMenuItem.Name = "itinerariosToolStripMenuItem";
-            this.itinerariosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.itinerariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.itinerariosToolStripMenuItem.Text = "Viaje";
             // 
             // puertosToolStripMenuItem
             // 
             this.puertosToolStripMenuItem.Name = "puertosToolStripMenuItem";
-            this.puertosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.puertosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.puertosToolStripMenuItem.Text = "Seguimiento Viaje";
             // 
             // viajesToolStripMenuItem

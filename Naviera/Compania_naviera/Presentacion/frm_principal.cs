@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Compania_naviera.Presentacion.Soporte.Tripulacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +50,12 @@ namespace Compania_naviera.Presentacion
         {
             frm_itinerarios formulario_de_itinerarios = new frm_itinerarios();
             formulario_de_itinerarios.ShowDialog();
+        }
+
+        private void TripulacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_tripulacion formulario_tripulacion = new frm_tripulacion();
+            formulario_tripulacion.ShowDialog();
         }
     }
 }

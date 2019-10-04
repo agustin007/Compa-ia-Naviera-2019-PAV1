@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Compania_naviera.Presentacion
+namespace Compania_naviera.Presentacion.Soporte.Tripulacion
 {
-    public partial class registro_itinerarios : Form
+    public partial class frm_tripulacion : Form
     {
-        public registro_itinerarios()
+        public frm_tripulacion()
         {
             InitializeComponent();
         }
