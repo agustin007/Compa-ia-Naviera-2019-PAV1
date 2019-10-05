@@ -42,6 +42,10 @@ namespace Compania_naviera.Presentacion
         private void Btn_buscar_Click_1(object sender, EventArgs e)
         {
             var parametros = new Dictionary<string, object>();
+            //if (chk_itinerarios.Checked)
+            //{
+            //    dgv_itinerarios.DataSource = servicio.obtenerItinerarioPorCategoria(parametros);
+            //}
             if (txt_categoria.Text != string.Empty)
             {
                 parametros.Add("Categoria", txt_categoria.Text);

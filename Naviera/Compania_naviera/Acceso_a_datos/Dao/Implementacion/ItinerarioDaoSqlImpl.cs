@@ -31,6 +31,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
 
             return DBHelper.getDBHelper().EjecutarSQL(sql, parametros) == 1;
         }
+
         public bool RegistrerItinerario(Itinerario oItinerario)
         {
             string sql = @"INSERT INTO Itinerarios(cod_intinerarios, descripcion, categoria)" +
@@ -46,7 +47,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
         public IList<Itinerario> GetTodosLosItinerarios()
         {
             List<Itinerario> lista = new List<Itinerario>();
-            string sql = @"SELECT * " +
+            string sql = @"SELECT cod_intinerarios, descripcion, categoria " +
                           "FROM Itinerarios";
 
             DataTable resultado = DBHelper.getDBHelper().ConsultaSQL(sql);

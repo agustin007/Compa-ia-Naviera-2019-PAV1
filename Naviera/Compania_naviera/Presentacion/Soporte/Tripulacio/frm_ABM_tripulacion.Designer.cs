@@ -32,10 +32,10 @@
             this.txt_legajo = new System.Windows.Forms.TextBox();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.cmb_puesto = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,21 +80,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tripulacion";
             // 
-            // txt_nombre
+            // cmb_puesto
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(84, 59);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(113, 20);
-            this.txt_nombre.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombre:";
+            this.cmb_puesto.FormattingEnabled = true;
+            this.cmb_puesto.Location = new System.Drawing.Point(84, 88);
+            this.cmb_puesto.Name = "cmb_puesto";
+            this.cmb_puesto.Size = new System.Drawing.Size(113, 21);
+            this.cmb_puesto.TabIndex = 4;
             // 
             // label3
             // 
@@ -105,13 +97,21 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Puesto:";
             // 
-            // cmb_puesto
+            // label2
             // 
-            this.cmb_puesto.FormattingEnabled = true;
-            this.cmb_puesto.Location = new System.Drawing.Point(84, 88);
-            this.cmb_puesto.Name = "cmb_puesto";
-            this.cmb_puesto.Size = new System.Drawing.Size(113, 21);
-            this.cmb_puesto.TabIndex = 4;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nombre:";
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Location = new System.Drawing.Point(84, 59);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(113, 20);
+            this.txt_nombre.TabIndex = 1;
             // 
             // frm_ABM_tripulacion
             // 
@@ -124,6 +124,7 @@
             this.Name = "frm_ABM_tripulacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ABM_tripulacion";
+            this.Load += new System.EventHandler(this.Frm_ABM_tripulacion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

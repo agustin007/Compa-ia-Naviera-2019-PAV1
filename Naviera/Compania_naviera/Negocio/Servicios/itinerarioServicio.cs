@@ -37,5 +37,14 @@ namespace Compania_naviera.Negocio.Servicios
         {
             return dao.ModificateItinerario(oItinerario);
         }
+
+        public bool ModificarEstadoItinerario(Itinerario oItinierario)
+        {
+            if(oItinierario.Estado == "false")
+                oItinierario.Estado = "true";
+            else
+                oItinierario.Estado = "false";
+            return dao.ModificateItinerario(oItinierario);
+        }
     }
 }

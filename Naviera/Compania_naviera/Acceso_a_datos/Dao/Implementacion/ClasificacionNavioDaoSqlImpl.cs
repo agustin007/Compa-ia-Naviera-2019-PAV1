@@ -36,8 +36,6 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
                 CodClasificacion = Convert.ToInt32(row["cod_clasificacion"].ToString()),
                 Descripcion = row["descripcion"].ToString()
             };
-            //oNavio.CodClasificacion = Convert.ToInt32(row["CodClasificacion"].ToString());
-            //oNavio.Descripcion = row["Descripcion"].ToString();
 
             return oNavio;
         }

@@ -37,6 +37,7 @@
             this.btn_agregar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
+            this.chk_itinerarios = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_itinerarios)).BeginInit();
             this.SuspendLayout();
@@ -52,16 +53,16 @@
             // 
             // txt_categoria
             // 
-            this.txt_categoria.Location = new System.Drawing.Point(94, 21);
+            this.txt_categoria.Location = new System.Drawing.Point(78, 21);
             this.txt_categoria.Name = "txt_categoria";
-            this.txt_categoria.Size = new System.Drawing.Size(162, 20);
+            this.txt_categoria.Size = new System.Drawing.Size(78, 20);
             this.txt_categoria.TabIndex = 1;
             // 
             // btn_buscar
             // 
             this.btn_buscar.BackgroundImage = global::Compania_naviera.Properties.Resources.boton_buscar1;
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar.Location = new System.Drawing.Point(290, 19);
+            this.btn_buscar.Location = new System.Drawing.Point(305, 19);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(32, 23);
             this.btn_buscar.TabIndex = 2;
@@ -70,6 +71,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chk_itinerarios);
             this.groupBox1.Controls.Add(this.btn_buscar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_categoria);
@@ -139,6 +141,16 @@
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
+            // chk_itinerarios
+            // 
+            this.chk_itinerarios.AutoSize = true;
+            this.chk_itinerarios.Location = new System.Drawing.Point(178, 24);
+            this.chk_itinerarios.Name = "chk_itinerarios";
+            this.chk_itinerarios.Size = new System.Drawing.Size(109, 17);
+            this.chk_itinerarios.TabIndex = 4;
+            this.chk_itinerarios.Text = "Todos los activos";
+            this.chk_itinerarios.UseVisualStyleBackColor = true;
+            // 
             // frm_itinerarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,5 +185,6 @@
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.CheckBox chk_itinerarios;
     }
 }

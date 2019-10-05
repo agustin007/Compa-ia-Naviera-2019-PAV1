@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Compania_naviera.Negocio.Entidades
 {
-    public class Itinerario
+    public class Puestos
     {
-        public int Codigo { get; set; }
+        public int CodPuesto { get; set; }
         public string Descripcion { get; set; }
-        public int Categoria { get; set; }
-        public string Estado { get; set; }
-        public Itinerario() { }
+
+        public override string ToString()
+        {
+            return Descripcion;
+        }
     }
 }

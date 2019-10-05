@@ -39,12 +39,14 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
+            this.chk_tripulacion = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tripulacion)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chk_tripulacion);
             this.groupBox1.Controls.Add(this.btn_buscar);
             this.groupBox1.Controls.Add(this.cmb_puesto);
             this.groupBox1.Controls.Add(this.label2);
@@ -52,7 +54,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(48, 40);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(466, 73);
+            this.groupBox1.Size = new System.Drawing.Size(466, 91);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
@@ -61,16 +63,17 @@
             // 
             this.btn_buscar.BackgroundImage = global::Compania_naviera.Properties.Resources.boton_buscar;
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar.Location = new System.Drawing.Point(395, 15);
+            this.btn_buscar.Location = new System.Drawing.Point(374, 15);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(50, 48);
             this.btn_buscar.TabIndex = 4;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // cmb_puesto
             // 
             this.cmb_puesto.FormattingEnabled = true;
-            this.cmb_puesto.Location = new System.Drawing.Point(252, 30);
+            this.cmb_puesto.Location = new System.Drawing.Point(230, 30);
             this.cmb_puesto.Name = "cmb_puesto";
             this.cmb_puesto.Size = new System.Drawing.Size(121, 21);
             this.cmb_puesto.TabIndex = 3;
@@ -78,7 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(203, 33);
+            this.label2.Location = new System.Drawing.Point(181, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 2;
@@ -86,7 +89,7 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(82, 30);
+            this.txt_nombre.Location = new System.Drawing.Point(68, 30);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(100, 20);
             this.txt_nombre.TabIndex = 1;
@@ -94,7 +97,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 33);
+            this.label1.Location = new System.Drawing.Point(15, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
@@ -105,10 +108,10 @@
             this.dgv_tripulacion.AllowUserToAddRows = false;
             this.dgv_tripulacion.AllowUserToDeleteRows = false;
             this.dgv_tripulacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tripulacion.Location = new System.Drawing.Point(54, 137);
+            this.dgv_tripulacion.Location = new System.Drawing.Point(48, 149);
             this.dgv_tripulacion.Name = "dgv_tripulacion";
             this.dgv_tripulacion.ReadOnly = true;
-            this.dgv_tripulacion.Size = new System.Drawing.Size(460, 153);
+            this.dgv_tripulacion.Size = new System.Drawing.Size(466, 153);
             this.dgv_tripulacion.TabIndex = 1;
             // 
             // btn_nuevo
@@ -150,6 +153,17 @@
             this.btn_salir.Size = new System.Drawing.Size(50, 48);
             this.btn_salir.TabIndex = 2;
             this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
+            // 
+            // chk_tripulacion
+            // 
+            this.chk_tripulacion.AutoSize = true;
+            this.chk_tripulacion.Location = new System.Drawing.Point(335, 68);
+            this.chk_tripulacion.Name = "chk_tripulacion";
+            this.chk_tripulacion.Size = new System.Drawing.Size(125, 17);
+            this.chk_tripulacion.TabIndex = 5;
+            this.chk_tripulacion.Text = "Todos los habilitados";
+            this.chk_tripulacion.UseVisualStyleBackColor = true;
             // 
             // frm_tripulacion
             // 
@@ -167,6 +181,7 @@
             this.Name = "frm_tripulacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_tripulacion";
+            this.Load += new System.EventHandler(this.Frm_tripulacion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tripulacion)).EndInit();
@@ -187,5 +202,6 @@
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_salir;
+        private System.Windows.Forms.CheckBox chk_tripulacion;
     }
 }
