@@ -1,4 +1,4 @@
-﻿using Compania_naviera.Presentacion.Soporte.Tripulacion;
+﻿using Compania_naviera.Presentacion.Soporte;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

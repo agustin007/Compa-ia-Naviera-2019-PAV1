@@ -83,10 +83,10 @@
     <Compile Include="Presentacion\Soporte\Navios\registro_navios.Designer.cs">
       <DependentUpon>registro_navios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Soporte\Tripulaciones\frm_ABM_tripulacion.cs">
+    <Compile Include="Presentacion\Soporte\frm_ABM_tripulacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Soporte\Tripulaciones\frm_ABM_tripulacion.Designer.cs">
+    <Compile Include="Presentacion\Soporte\frm_ABM_tripulacion.Designer.cs">
       <DependentUpon>frm_ABM_tripulacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_principal.cs">
@@ -107,10 +107,10 @@
     <Compile Include="Presentacion\Soporte\Itinerarios\registro_itinerarios.Designer.cs">
       <DependentUpon>registro_itinerarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Soporte\Tripulaciones\frm_tripulacion.cs">
+    <Compile Include="Presentacion\Soporte\frm_tripulacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Soporte\Tripulaciones\frm_tripulacion.designer.cs">
+    <Compile Include="Presentacion\Soporte\frm_tripulacion.designer.cs">
       <DependentUpon>frm_tripulacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -124,7 +124,7 @@
     <EmbeddedResource Include="Presentacion\Soporte\Navios\registro_navios.resx">
       <DependentUpon>registro_navios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Soporte\Tripulaciones\frm_ABM_tripulacion.resx">
+    <EmbeddedResource Include="Presentacion\Soporte\frm_ABM_tripulacion.resx">
       <DependentUpon>frm_ABM_tripulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_principal.resx">
@@ -136,7 +136,7 @@
     <EmbeddedResource Include="Presentacion\Soporte\Itinerarios\registro_itinerarios.resx">
       <DependentUpon>registro_itinerarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Soporte\Tripulaciones\frm_tripulacion.resx">
+    <EmbeddedResource Include="Presentacion\Soporte\frm_tripulacion.resx">
       <DependentUpon>frm_tripulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -162,7 +162,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Negocio\Tripulaciones\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\botones\boton_buscar.png" />
     <Content Include="Recursos\botones\boton_exit.png" />

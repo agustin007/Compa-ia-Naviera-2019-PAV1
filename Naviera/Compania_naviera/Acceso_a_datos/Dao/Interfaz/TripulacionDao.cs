@@ -11,5 +11,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Interfaz
     {
         IList<Puestos> GetPuestos();
         IList<Tripulacion> GetTodasLasTripulacion();
+        bool RegistrerTripulacion(Tripulacion oTripulacion);
+        bool ModificateTripulacion(Tripulacion oTripulacionSeleccionada);
     }
 }

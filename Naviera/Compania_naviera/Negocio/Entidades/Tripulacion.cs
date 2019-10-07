@@ -12,6 +12,7 @@ namespace Compania_naviera.Negocio.Entidades
         public string Nombre { get; set; }
         public int LegajoJefe { get; set; }
         public Puestos CodPuesto { get; set; }
+        public string Estado { get; set; }
         public Tripulacion() { }
     }
 }

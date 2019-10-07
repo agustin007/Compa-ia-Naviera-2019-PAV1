@@ -44,6 +44,36 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             return lista;
         }
 
+        public bool RegistrerTripulacion(Tripulacion oTripulacion)
+        {
+            string sql = @"INSERT INTO Tripulaciones(legajo,nombre,FK_cod_puesto)" + 
+                          "VALUES(@Legajo, @Nombre, @Puesto)";
+
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("@Legajo", oTripulacion.Legajo);
+            parametros.Add("@Nombre", oTripulacion.Nombre);
+            parametros.Add("@Puesto", oTripulacion.CodPuesto.CodPuesto);
+
+            return DBHelper.getDBHelper().EjecutarSQL(sql, parametros) == 1;
+        }
+
+        public bool ModificateTripulacion(Tripulacion oTripulacionSeleccionada)
+        {
+            string sql = @"UPDATE Tripulaciones " +
+                          "SET nombre = @nombre," +
+                          "FK_cod_puesto = @Puesto," +
+                          "estado = @Estado" + 
+                          " WHERE legajo = @legajo";
+
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("@Legajo", oTripulacionSeleccionada.Legajo);
+            parametros.Add("@Nombre", oTripulacionSeleccionada.Nombre);
+            parametros.Add("@Puesto", oTripulacionSeleccionada.CodPuesto.CodPuesto);
+            parametros.Add("@Estado", oTripulacionSeleccionada.Estado);
+
+            return DBHelper.getDBHelper().EjecutarSQL(sql, parametros) == 1;
+        }
+
         public Tripulacion mapeoTripulacion(DataRow row)
         {
             Tripulacion oTripulacion = new Tripulacion();
@@ -56,6 +86,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
                     CodPuesto = Convert.ToInt32(row["FK_cod_puesto"].ToString()),
                     Descripcion = row["descripcion"].ToString()
                 };
+                oTripulacion.Estado = row["estado"].ToString();
             }
             return oTripulacion;
         }

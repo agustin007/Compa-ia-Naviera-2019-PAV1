@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Compania_naviera.Negocio.Servicios;
 using Compania_naviera.Negocio.Entidades;
 
-namespace Compania_naviera.Presentacion.Soporte.Tripulacion
+namespace Compania_naviera.Presentacion.Soporte
 {
     public partial class frm_tripulacion : Form
     {
@@ -49,6 +49,31 @@ namespace Compania_naviera.Presentacion.Soporte.Tripulacion
         private void Btn_salir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Btn_nuevo_Click(object sender, EventArgs e)
+        {
+            frm_ABM_tripulacion formulario_tripulacion = new frm_ABM_tripulacion();
+            formulario_tripulacion.ShowDialog();
+            Btn_buscar_Click(sender, e);
+        }
+
+        private void Btn_modificar_Click(object sender, EventArgs e)
+        {
+            frm_ABM_tripulacion formulario_tripulacion = new frm_ABM_tripulacion();
+            var tripulacion = (Tripulacion)dgv_tripulacion.CurrentRow.DataBoundItem;
+            formulario_tripulacion.seleccionarTripulacion(frm_ABM_tripulacion.FormMode.update, tripulacion);
+            formulario_tripulacion.ShowDialog();
+            Btn_buscar_Click(sender, e);
+        }
+
+        private void Btn_eliminar_Click(object sender, EventArgs e)
+        {
+            frm_ABM_tripulacion formulario_tripulacion = new frm_ABM_tripulacion();
+            var tripulacion = (Tripulacion)dgv_tripulacion.CurrentRow.DataBoundItem;
+            formulario_tripulacion.seleccionarTripulacion(frm_ABM_tripulacion.FormMode.delete, tripulacion);
+            formulario_tripulacion.ShowDialog();
+            Btn_buscar_Click(sender, e);
         }
     }
 }

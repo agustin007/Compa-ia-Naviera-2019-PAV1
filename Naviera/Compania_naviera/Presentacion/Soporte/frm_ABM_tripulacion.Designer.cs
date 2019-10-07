@@ -1,4 +1,4 @@
-﻿namespace Compania_naviera.Presentacion.Soporte.Tripulacion
+﻿namespace Compania_naviera.Presentacion.Soporte
 {
     partial class frm_ABM_tripulacion
     {
