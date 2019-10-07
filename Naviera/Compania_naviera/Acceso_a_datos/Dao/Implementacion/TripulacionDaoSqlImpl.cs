@@ -27,7 +27,21 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             }
             return lista;
         }
+        public IList<Tripulacion> GetTripulacionesDeAlta()
+        {
+            IList<Tripulacion> lista = new List<Tripulacion>();
+            string sql = @"SELECT t.*, t1.descripcion " +
+                          "FROM Tripulaciones t, Puestos t1 " +
+                          " WHERE t.estado = 'true'";
 
+            DataTable resultado = DBHelper.getDBHelper().ConsultaSQL(sql);
+
+            foreach (DataRow row in resultado.Rows)
+            {
+                lista.Add(mapeoTripulacion(row));
+            }
+            return lista;
+        }
         public IList<Tripulacion> GetTodasLasTripulacion()
         {
             IList<Tripulacion> lista = new List<Tripulacion>();
@@ -41,6 +55,28 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             {
                 lista.Add(mapeoTripulacion(row));
             }
+            return lista;
+        }
+        public IList<Tripulacion> GetTripulacionPorFiltro(Dictionary<string,object> parametros)
+        {
+            List<Tripulacion> lista = new List<Tripulacion>();
+            string sql = "SELECT t.*, t1.cod_puesto " +
+                         "FROM Tripulaciones t, Puestos t1 " +
+                         "WHERE t.FK_cod_puesto = t1.cod_puesto";
+
+            if (parametros.ContainsKey("Nombre"))
+                sql += " AND (t.nombre LIKE '%' + @Nombre + '%') ";
+
+            if (parametros.ContainsKey("CodPuesto"))
+                sql += "AND t.FK_cod_puesto = @Cod_puesto";
+            
+            DataTable resultado = DBHelper.getDBHelper().ConsultaSQLConParametros(sql, parametros);
+
+            foreach(DataRow row in resultado.Rows)
+            {
+                lista.Add(mapeoTripulacion(row));
+            }
+
             return lista;
         }
 
@@ -79,7 +115,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             Tripulacion oTripulacion = new Tripulacion();
             {
                 oTripulacion.Legajo = Convert.ToInt32(row["legajo"].ToString());
-                oTripulacion.Nombre = row["nombre"].ToString(); 
+                oTripulacion.Nombre = row["nombre"].ToString();
                 oTripulacion.LegajoJefe = Convert.ToInt32(row["FK_legajo_jefe"].ToString());
                 oTripulacion.CodPuesto = new Puestos()
                 {
@@ -87,6 +123,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
                     Descripcion = row["descripcion"].ToString()
                 };
                 oTripulacion.Estado = row["estado"].ToString();
+
             }
             return oTripulacion;
         }

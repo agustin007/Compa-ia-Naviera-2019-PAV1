@@ -33,9 +33,19 @@ namespace Compania_naviera.Negocio.Servicios
             return dao.RegistrerTripulacion(oTripulacion);
         }
 
+        internal object ObtenerTripulacionesConFiltros(Dictionary<string, object> parametros)
+        {
+            return dao.GetTripulacionPorFiltro(parametros);
+        }
+
         public bool ModificarTripulacion(Tripulacion oTripulacionSeleccionada)
         {
             return dao.ModificateTripulacion(oTripulacionSeleccionada);
+        }
+
+        internal object ObtenerTripulacionesDeAlta()
+        {
+            return dao.GetTripulacionesDeAlta();
         }
 
         public bool ModificarEstadoTripulacion(Tripulacion oTripulacionSeleccionada)

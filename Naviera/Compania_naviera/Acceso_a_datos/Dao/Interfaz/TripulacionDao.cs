@@ -13,5 +13,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Interfaz
         IList<Tripulacion> GetTodasLasTripulacion();
         bool RegistrerTripulacion(Tripulacion oTripulacion);
         bool ModificateTripulacion(Tripulacion oTripulacionSeleccionada);
+        IList<Tripulacion> GetTripulacionPorFiltro(Dictionary<string, object> parametros);
+        IList<Tripulacion> GetTripulacionesDeAlta();
     }
 }

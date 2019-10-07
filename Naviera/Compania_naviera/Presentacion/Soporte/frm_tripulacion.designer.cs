@@ -62,11 +62,11 @@
             // chk_tripulacion
             // 
             this.chk_tripulacion.AutoSize = true;
-            this.chk_tripulacion.Location = new System.Drawing.Point(335, 68);
+            this.chk_tripulacion.Location = new System.Drawing.Point(280, 68);
             this.chk_tripulacion.Name = "chk_tripulacion";
-            this.chk_tripulacion.Size = new System.Drawing.Size(125, 17);
+            this.chk_tripulacion.Size = new System.Drawing.Size(180, 17);
             this.chk_tripulacion.TabIndex = 5;
-            this.chk_tripulacion.Text = "Todos los habilitados";
+            this.chk_tripulacion.Text = "Todos incluidos los desabilitados";
             this.chk_tripulacion.UseVisualStyleBackColor = true;
             // 
             // btn_buscar
