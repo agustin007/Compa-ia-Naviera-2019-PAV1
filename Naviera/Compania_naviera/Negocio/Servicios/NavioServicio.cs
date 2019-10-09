@@ -45,5 +45,10 @@ namespace Compania_naviera.Negocio.Servicios
                 oNavio.Estado = "false";
             return dao.ModificateNavio(oNavio);
         }
+
+        public IList<Navio> ObtenerTodosLosDeAlta()
+        {
+            return dao.GetTodosLosDeAlta();
+        }
     }
 }

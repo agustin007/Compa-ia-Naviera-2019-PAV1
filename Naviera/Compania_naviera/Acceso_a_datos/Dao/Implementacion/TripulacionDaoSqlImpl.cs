@@ -45,7 +45,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
         public IList<Tripulacion> GetTodasLasTripulacion()
         {
             IList<Tripulacion> lista = new List<Tripulacion>();
-            string sql = @"SELECT t.*, t1.descripcion " +
+            string sql = @"SELECT t.legajo,t.nombre,t.FK_legajo_jefe,t.FK_cod_puesto,t.estado, t1.descripcion " +
                           "FROM Tripulaciones t, Puestos t1 " + 
                           " WHERE t.FK_cod_puesto = t1.cod_puesto";
 
@@ -60,9 +60,9 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
         public IList<Tripulacion> GetTripulacionPorFiltro(Dictionary<string,object> parametros)
         {
             List<Tripulacion> lista = new List<Tripulacion>();
-            string sql = "SELECT t.*, t1.cod_puesto " +
+            string sql = "SELECT t.*, t1.descripcion " +
                          "FROM Tripulaciones t, Puestos t1 " +
-                         "WHERE t.FK_cod_puesto = t1.cod_puesto";
+                         "WHERE 1 = 1";
 
             if (parametros.ContainsKey("Nombre"))
                 sql += " AND (t.nombre LIKE '%' + @Nombre + '%') ";

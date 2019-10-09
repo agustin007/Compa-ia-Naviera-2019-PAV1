@@ -14,6 +14,23 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
     {
         public NavioDaoSqlImpl() { }
 
+        public IList<Navio> GetTodosLosDeAlta()
+        {
+               List<Navio> lista = new List<Navio>();
+
+            string sql = @"SELECT t.*,t1.descripcion " +
+                          "FROM Navios t, Clasificacion_navio t1 " +
+                          " WHERE t.tipo_clasificacion = cod_clasificacion" +
+                          " AND t.estado = 'true'";
+
+            DataTable tabla = DBHelper.getDBHelper().ConsultaSQL(sql);
+
+            foreach(DataRow row in tabla.Rows)
+            {
+                lista.Add(MapeoNavios(row));
+            }
+            return lista;
+        }
         public IList<Navio> GetNavioById(Dictionary<string, object> parametros)
         {
             List<Navio> lista = new List<Navio>();

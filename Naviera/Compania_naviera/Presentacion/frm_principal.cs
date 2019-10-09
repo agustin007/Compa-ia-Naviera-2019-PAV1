@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Compania_naviera.Presentacion.Operaciones.Viaje;
 
 namespace Compania_naviera.Presentacion
 {
@@ -56,6 +56,12 @@ namespace Compania_naviera.Presentacion
         {
             frm_tripulacion formulario_tripulacion = new frm_tripulacion();
             formulario_tripulacion.ShowDialog();
+        }
+
+        private void ItinerariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_viaje formulario_viaje = new frm_viaje();
+            formulario_viaje.ShowDialog();
         }
     }
 }

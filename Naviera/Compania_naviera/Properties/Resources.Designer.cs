@@ -93,6 +93,26 @@ namespace Compania_naviera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_agregar {
+            get {
+                object obj = ResourceManager.GetObject("btn_agregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_guardar {
+            get {
+                object obj = ResourceManager.GetObject("btn_guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_modificar {
             get {
                 object obj = ResourceManager.GetObject("btn_modificar", resourceCulture);
@@ -126,6 +146,16 @@ namespace Compania_naviera.Properties {
         internal static System.Drawing.Bitmap candado {
             get {
                 object obj = ResourceManager.GetObject("candado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap comentar {
+            get {
+                object obj = ResourceManager.GetObject("comentar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +216,26 @@ namespace Compania_naviera.Properties {
         internal static System.Drawing.Bitmap fondo_tripulacion {
             get {
                 object obj = ResourceManager.GetObject("fondo_tripulacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_viajes1 {
+            get {
+                object obj = ResourceManager.GetObject("fondo_viajes1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_viajes3 {
+            get {
+                object obj = ResourceManager.GetObject("fondo_viajes3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

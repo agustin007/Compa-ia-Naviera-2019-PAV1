@@ -65,6 +65,12 @@
     <Compile Include="Negocio\Servicios\ItinerarioServicio.cs" />
     <Compile Include="Negocio\Servicios\NavioServicio.cs" />
     <Compile Include="Negocio\Servicios\TripulacionServicio.cs" />
+    <Compile Include="Presentacion\Operaciones\Viaje\frm_viaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Operaciones\Viaje\frm_viaje.Designer.cs">
+      <DependentUpon>frm_viaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Soporte\Itinerarios\frm_itinerarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,10 +89,10 @@
     <Compile Include="Presentacion\Soporte\Navios\registro_navios.Designer.cs">
       <DependentUpon>registro_navios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Soporte\frm_ABM_tripulacion.cs">
+    <Compile Include="Presentacion\Soporte\Tripulaciones\frm_ABM_tripulacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Soporte\frm_ABM_tripulacion.Designer.cs">
+    <Compile Include="Presentacion\Soporte\Tripulaciones\frm_ABM_tripulacion.Designer.cs">
       <DependentUpon>frm_ABM_tripulacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_principal.cs">
@@ -107,14 +113,17 @@
     <Compile Include="Presentacion\Soporte\Itinerarios\registro_itinerarios.Designer.cs">
       <DependentUpon>registro_itinerarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Soporte\frm_tripulacion.cs">
+    <Compile Include="Presentacion\Soporte\Tripulaciones\frm_tripulacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Soporte\frm_tripulacion.designer.cs">
+    <Compile Include="Presentacion\Soporte\Tripulaciones\frm_tripulacion.designer.cs">
       <DependentUpon>frm_tripulacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\Operaciones\Viaje\frm_viaje.resx">
+      <DependentUpon>frm_viaje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Soporte\Itinerarios\frm_itinerarios.resx">
       <DependentUpon>frm_itinerarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,7 +133,7 @@
     <EmbeddedResource Include="Presentacion\Soporte\Navios\registro_navios.resx">
       <DependentUpon>registro_navios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Soporte\frm_ABM_tripulacion.resx">
+    <EmbeddedResource Include="Presentacion\Soporte\Tripulaciones\frm_ABM_tripulacion.resx">
       <DependentUpon>frm_ABM_tripulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_principal.resx">
@@ -136,7 +145,7 @@
     <EmbeddedResource Include="Presentacion\Soporte\Itinerarios\registro_itinerarios.resx">
       <DependentUpon>registro_itinerarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Soporte\frm_tripulacion.resx">
+    <EmbeddedResource Include="Presentacion\Soporte\Tripulaciones\frm_tripulacion.resx">
       <DependentUpon>frm_tripulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -170,12 +179,17 @@
     <Content Include="Recursos\botones\boton_exit.png" />
     <Content Include="Recursos\botones\btn_modificar.jpg" />
     <Content Include="Recursos\botones\btn_nuevo.jpg" />
+    <None Include="Recursos\btn_guardar.jpg" />
+    <None Include="Recursos\btn_agregar.jpg" />
     <Content Include="Recursos\candado.jpg" />
+    <None Include="Recursos\comentar.png" />
     <Content Include="Recursos\descarga.jpg" />
     <None Include="Recursos\fondo_itinerarios.jpg" />
     <None Include="Recursos\eliminar.jpg" />
     <Content Include="Recursos\Fondo_principal.jpg" />
     <None Include="Recursos\fondo_tripulacion.jpg" />
+    <None Include="Recursos\fondo_viajes1.jpg" />
+    <None Include="Recursos\fondo_viajes3.jpg" />
     <Content Include="Recursos\navio.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

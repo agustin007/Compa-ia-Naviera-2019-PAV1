@@ -50,7 +50,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(758, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -67,21 +67,21 @@
             // pasajerosToolStripMenuItem
             // 
             this.pasajerosToolStripMenuItem.Name = "pasajerosToolStripMenuItem";
-            this.pasajerosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pasajerosToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.pasajerosToolStripMenuItem.Text = "Navio";
             this.pasajerosToolStripMenuItem.Click += new System.EventHandler(this.PasajerosToolStripMenuItem_Click);
             // 
             // itinerariosToolStripMenuItem1
             // 
             this.itinerariosToolStripMenuItem1.Name = "itinerariosToolStripMenuItem1";
-            this.itinerariosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.itinerariosToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
             this.itinerariosToolStripMenuItem1.Text = "Itinerarios";
             this.itinerariosToolStripMenuItem1.Click += new System.EventHandler(this.ItinerariosToolStripMenuItem1_Click);
             // 
             // tripulacionToolStripMenuItem
             // 
             this.tripulacionToolStripMenuItem.Name = "tripulacionToolStripMenuItem";
-            this.tripulacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tripulacionToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.tripulacionToolStripMenuItem.Text = "Tripulacion";
             this.tripulacionToolStripMenuItem.Click += new System.EventHandler(this.TripulacionToolStripMenuItem_Click);
             // 
@@ -96,9 +96,11 @@
             // 
             // itinerariosToolStripMenuItem
             // 
+            this.itinerariosToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.itinerariosToolStripMenuItem.Name = "itinerariosToolStripMenuItem";
             this.itinerariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.itinerariosToolStripMenuItem.Text = "Viaje";
+            this.itinerariosToolStripMenuItem.Click += new System.EventHandler(this.ItinerariosToolStripMenuItem_Click);
             // 
             // puertosToolStripMenuItem
             // 
@@ -124,7 +126,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Compania_naviera.Properties.Resources.Fondo_principal;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(758, 364);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_principal";

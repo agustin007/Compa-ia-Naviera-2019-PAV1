@@ -26,19 +26,19 @@ namespace Compania_naviera.Presentacion.Soporte
             if (!chk_tripulacion.Checked)
             {
                 var parametros = new Dictionary<string, object>();
-                if (txt_nombre.Text != "")
+                if (txt_nombre.Text != string.Empty)
                 {
                     parametros.Add("@Nombre", txt_nombre.Text);
                 }
-                if (cmb_puesto.Text != "")
+                if (cmb_puesto.Text != string.Empty)
                 {
                     parametros.Add("@CodPuesto", cmb_puesto.SelectedValue);
                 }
-                if (txt_nombre.Text == "" && cmb_puesto.Text == "")
-                { 
+
+                if (txt_nombre.Text == string.Empty && cmb_puesto.Text == string.Empty)
                     dgv_tripulacion.DataSource = servicio.ObtenerTripulacionesDeAlta();
-                }
-            if (parametros.Count > 0)
+
+                if (parametros.Count > 0)
                 {
                     dgv_tripulacion.DataSource = servicio.ObtenerTripulacionesConFiltros(parametros);
                 }

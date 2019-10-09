@@ -14,6 +14,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Interfaz
 
         bool RegistrerNavios(Navio oNavio);
         bool ModificateNavio(Navio oNavio);
+        IList<Navio> GetTodosLosDeAlta();
         //bool DeleteNavio(Navio oNavio);
         //IList<ClasificacionNavio> GetNavioTipo();
     }

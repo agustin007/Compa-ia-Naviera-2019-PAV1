@@ -67,8 +67,7 @@ namespace Compania_naviera.Presentacion
                 if (parametros.Count > 0)
                     dgv_navios.DataSource = servicio.ObtenerNavioPorId(parametros);
                 else
-                    MessageBox.Show("Debe ingresar al menos un criterio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                    dgv_navios.DataSource = servicio.ObtenerTodosLosDeAlta();
             }
             else
             {
