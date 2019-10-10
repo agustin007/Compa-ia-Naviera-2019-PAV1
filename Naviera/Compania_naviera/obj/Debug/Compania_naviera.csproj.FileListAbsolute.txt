@@ -72,3 +72,4 @@ C:\Users\Agustin\Desktop\PAV-2019-agustin_carranza\PAV-2019-agustin_carranza\Nav
 C:\Users\Agustin\Desktop\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.Soporte.frm_ABM_tripulacion.resources
 C:\Users\Agustin\Desktop\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.Soporte.frm_tripulacion.resources
 C:\Users\Agustin\Desktop\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.Operaciones.Viaje.frm_viaje.resources
+C:\Users\Agustin\Desktop\PAV-2019\Naviera\Compania_naviera\obj\Debug\Compania_naviera.Presentacion.Operaciones.Viaje.frm_alta_viaje.resources
