@@ -11,5 +11,6 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Interfaz
         IList<Navio> GetNavios();
         IList<Itinerario> GetItinerarios();
         IList<Tripulacion> GetTripulaciones();
+        IList<Tripulacion> GetCargarTripulacion(int seleccionado);
     }
 }

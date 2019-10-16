@@ -32,5 +32,10 @@ namespace Compania_naviera.Negocio.Servicios
         {
             return dao.GetTripulaciones();
         }
+
+        public IList<Tripulacion> CargarTripulaciones(int seleccionado)
+        {
+            return dao.GetCargarTripulacion(seleccionado);
+        }
     }
 }

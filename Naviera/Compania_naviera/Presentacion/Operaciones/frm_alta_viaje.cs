@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Compania_naviera.Negocio.Servicios;
+using Compania_naviera.Negocio;
 using Compania_naviera.Negocio.Entidades;
 
 namespace Compania_naviera.Presentacion.Operaciones.Viaje
@@ -60,9 +61,37 @@ namespace Compania_naviera.Presentacion.Operaciones.Viaje
             {
                 case FormMode.insert:
                     {
+                        Negocio.Entidades.Viaje oViaje = new Negocio.Entidades.Viaje();
+                        oViaje.FechaViaje = DateTime.Parse(txt_viaje.Text);
+                        oViaje.Duracion = Int32.Parse(txt_duracion.Text);
+                        oViaje.CodNavio = new Navio();
+                        oViaje.CodNavio.Codigo = Int32.Parse(cmb_navio.Text);
+
+                        
+                        var tripulacion = (Tripulacion)dgv_asignacion.CurrentRow.DataBoundItem;
+                        List<int> listaLegajo = new List<int>();
+                        foreach(int legajo in listaLegajo)
+                        {
+                            listaLegajo.Add(legajo);
+                        }
+                        //TripulacionPorViaje oTripulacionPorViaje = new TripulacionPorViaje();
+                        //oTripulacionPorViaje.IdFecha = oViaje.IdViaje;
+                        //oTripulacionPorViaje.Legajo = 
+                        
                         break;
                     }
             }
+        }
+
+        public void Btn_agregar_Click(object sender, EventArgs e)
+        {
+            //var seleccionado = (int)cmb_tripulacion.SelectedValue;
+            //dgv_asignacion.Rows.Add(cmb_tripulacion.SelectedText);
+            //IList<Tripulacion> Tripulaciones = servicio.CargarTripulaciones(seleccionado);
+
+            dgv_asignacion.Rows.Add(new object[] { cmb_tripulacion.SelectedItem.ToString() });
+            //dgv_asignacion.DataSource = servicio.CargarTripulaciones(seleccionado);
+
         }
     }
 }

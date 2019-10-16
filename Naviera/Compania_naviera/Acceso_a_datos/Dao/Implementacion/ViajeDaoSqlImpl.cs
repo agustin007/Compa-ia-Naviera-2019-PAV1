@@ -59,6 +59,24 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             }
             return lista;
         }
+        public IList<Tripulacion> GetCargarTripulacion(int seleccionado)
+        {
+            List<Tripulacion> lista = new List<Tripulacion>();
+
+            string sql = " SELECT legajo, nombre " +
+                         " FROM Tripulaciones " +
+                         " WHERE legajo = " + seleccionado.ToString();
+
+            DataTable resultado = DBHelper.getDBHelper().ConsultaSQL(sql);
+
+            foreach(DataRow row in resultado.Rows)
+            {
+                lista.Add(mapeoTripulacion(row));
+            }
+
+            return lista;
+        }
+
 
         private Tripulacion mapeoTripulacion(DataRow row)
         {

@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
+            this.colTripulante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_asignacion)).BeginInit();
@@ -99,6 +100,7 @@
             this.btn_agregar.Size = new System.Drawing.Size(44, 44);
             this.btn_agregar.TabIndex = 6;
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
             // 
             // cmb_tripulacion
             // 
@@ -110,9 +112,14 @@
             // 
             // dgv_asignacion
             // 
+            this.dgv_asignacion.AllowUserToAddRows = false;
+            this.dgv_asignacion.AllowUserToDeleteRows = false;
             this.dgv_asignacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_asignacion.Location = new System.Drawing.Point(30, 194);
+            this.dgv_asignacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colTripulante});
+            this.dgv_asignacion.Location = new System.Drawing.Point(30, 193);
             this.dgv_asignacion.Name = "dgv_asignacion";
+            this.dgv_asignacion.ReadOnly = true;
             this.dgv_asignacion.Size = new System.Drawing.Size(376, 131);
             this.dgv_asignacion.TabIndex = 8;
             // 
@@ -201,6 +208,12 @@
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
+            // colTripulante
+            // 
+            this.colTripulante.HeaderText = "Tripulantes";
+            this.colTripulante.Name = "colTripulante";
+            this.colTripulante.ReadOnly = true;
+            // 
             // frm_alta_viaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,5 +255,6 @@
         private System.Windows.Forms.DataGridView dgv_asignacion;
         private System.Windows.Forms.Button btn_aceptar;
         private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTripulante;
     }
 }

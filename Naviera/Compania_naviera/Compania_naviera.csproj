@@ -63,22 +63,23 @@
     <Compile Include="Negocio\Entidades\Navio.cs" />
     <Compile Include="Negocio\Entidades\Puestos.cs" />
     <Compile Include="Negocio\Entidades\Tripulacion.cs" />
+    <Compile Include="Negocio\Entidades\TripulacionPorViaje.cs" />
     <Compile Include="Negocio\Entidades\Viaje.cs" />
     <Compile Include="Negocio\Servicios\ClasificacionNavioServicio.cs" />
     <Compile Include="Negocio\Servicios\ItinerarioServicio.cs" />
     <Compile Include="Negocio\Servicios\NavioServicio.cs" />
     <Compile Include="Negocio\Servicios\TripulacionServicio.cs" />
     <Compile Include="Negocio\Servicios\ViajeServicio.cs" />
-    <Compile Include="Presentacion\Operaciones\Viajes\frm_alta_viaje.cs">
+    <Compile Include="Presentacion\Operaciones\frm_alta_viaje.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Operaciones\Viajes\frm_alta_viaje.Designer.cs">
+    <Compile Include="Presentacion\Operaciones\frm_alta_viaje.Designer.cs">
       <DependentUpon>frm_alta_viaje.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Operaciones\Viajes\frm_viaje.cs">
+    <Compile Include="Presentacion\Operaciones\frm_viaje.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Operaciones\Viajes\frm_viaje.Designer.cs">
+    <Compile Include="Presentacion\Operaciones\frm_viaje.Designer.cs">
       <DependentUpon>frm_viaje.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Soporte\Itinerarios\frm_itinerarios.cs">
@@ -131,10 +132,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\Operaciones\Viajes\frm_alta_viaje.resx">
+    <EmbeddedResource Include="Presentacion\Operaciones\frm_alta_viaje.resx">
       <DependentUpon>frm_alta_viaje.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Operaciones\Viajes\frm_viaje.resx">
+    <EmbeddedResource Include="Presentacion\Operaciones\frm_viaje.resx">
       <DependentUpon>frm_viaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Soporte\Itinerarios\frm_itinerarios.resx">
@@ -186,6 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Negocio\Tripulaciones\" />
+    <Folder Include="Presentacion\Operaciones\Viajes\" />
     <Folder Include="Presentacion\Operaciones\Viaje\" />
   </ItemGroup>
   <ItemGroup>

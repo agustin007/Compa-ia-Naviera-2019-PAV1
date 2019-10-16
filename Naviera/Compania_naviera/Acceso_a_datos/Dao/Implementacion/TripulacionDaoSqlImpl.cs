@@ -116,7 +116,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             {
                 oTripulacion.Legajo = Convert.ToInt32(row["legajo"].ToString());
                 oTripulacion.Nombre = row["nombre"].ToString();
-                oTripulacion.LegajoJefe = Convert.ToInt32(row["FK_legajo_jefe"].ToString());
+                //oTripulacion.LegajoJefe = Convert.ToInt32(row["FK_legajo_jefe"].ToString());
                 oTripulacion.CodPuesto = new Puestos()
                 {
                     CodPuesto = Convert.ToInt32(row["FK_cod_puesto"].ToString()),
