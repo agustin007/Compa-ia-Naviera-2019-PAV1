@@ -77,6 +77,33 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             return lista;
         }
 
+        public bool RegistrerViaje(Viaje oViaje, List<int> listaLegajo)
+        {
+        
+            DataManager dm = new DataManager();
+            try
+            {
+                dm.BeginTransaction();
+                string sqlViaje = "INSERT INTO Viajes(fecha_viaje, duracion, FK_cod_navio, FK_cod_itinerario)" +
+                             "VALUES(" + oViaje.FechaViaje.ToString() + "," + oViaje.Duracion.ToString() +
+                             "," + oViaje.CodNavio.ToString() + "," + oViaje.CodItinerario.ToString() + ")";
+
+                dm.EjecutarSQL(sqlViaje);
+
+                foreach (int legajo in listaLegajo)
+                {
+                    string sqlAsignacion = "INSERT INTO Tripulante_x_viaje(id_viaje,legajo)" +
+                                           "VALUES(" + oViaje.IdViaje.ToString() + "," + legajo.ToString() + ");";
+                }
+                dm.Commit();
+            }
+            catch (Exception)
+            {
+                dm.Rollback();
+                throw;
+            }
+            return true;
+        }
 
         private Tripulacion mapeoTripulacion(DataRow row)
         {

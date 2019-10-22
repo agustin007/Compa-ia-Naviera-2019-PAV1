@@ -15,5 +15,6 @@ namespace Compania_naviera.Negocio.Entidades
         public Itinerario CodItinerario { get; set; }
         public IList<Tripulacion> TripulacionAsignada { get; set; }
         public Viaje() { }
+
     }
 }

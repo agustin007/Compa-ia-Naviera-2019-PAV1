@@ -14,5 +14,10 @@ namespace Compania_naviera.Negocio.Entidades
         public Puestos CodPuesto { get; set; }
         public string Estado { get; set; }
         public Tripulacion() { }
+
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }

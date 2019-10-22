@@ -37,5 +37,10 @@ namespace Compania_naviera.Negocio.Servicios
         {
             return dao.GetCargarTripulacion(seleccionado);
         }
+
+        public bool RegistrarViaje(Viaje oViaje, List<int> listaLegajo)
+        {
+            return dao.RegistrerViaje(oViaje, listaLegajo);
+        }
     }
 }

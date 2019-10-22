@@ -21,6 +21,7 @@ namespace Compania_naviera.Presentacion.Operaciones.Viaje
         {
             servicio = new ViajeServicio();
             InitializeComponent();
+            inicializeDataComponet();
         }
 
         public enum FormMode{
@@ -31,7 +32,11 @@ namespace Compania_naviera.Presentacion.Operaciones.Viaje
         {
             formMode = opcion;
         }
+        private void inicializeDataComponet()
+        {
+            txt_fecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
+        }
         private void Frm_alta_viaje_Load(object sender, EventArgs e)
         {
             llenarCombos(cmb_navio, servicio.ObtenerNavios(), "Nombre", "Codigo");
@@ -62,22 +67,20 @@ namespace Compania_naviera.Presentacion.Operaciones.Viaje
                 case FormMode.insert:
                     {
                         Negocio.Entidades.Viaje oViaje = new Negocio.Entidades.Viaje();
-                        oViaje.FechaViaje = DateTime.Parse(txt_viaje.Text);
+                        oViaje.FechaViaje = DateTime.Parse(txt_fecha.Text);
                         oViaje.Duracion = Int32.Parse(txt_duracion.Text);
                         oViaje.CodNavio = new Navio();
                         oViaje.CodNavio.Codigo = Int32.Parse(cmb_navio.Text);
-
-                        
-                        var tripulacion = (Tripulacion)dgv_asignacion.CurrentRow.DataBoundItem;
+                                                
                         List<int> listaLegajo = new List<int>();
-                        foreach(int legajo in listaLegajo)
+                        foreach(DataGridViewRow row in dgv_asignacion.Rows)
                         {
-                            listaLegajo.Add(legajo);
+                            listaLegajo.Add(Convert.ToInt32(row.Cells["legajo"].Value.ToString()));
                         }
-                        //TripulacionPorViaje oTripulacionPorViaje = new TripulacionPorViaje();
-                        //oTripulacionPorViaje.IdFecha = oViaje.IdViaje;
-                        //oTripulacionPorViaje.Legajo = 
-                        
+                        if (servicio.RegistrarViaje(oViaje, listaLegajo))
+                            MessageBox.Show("El viaje fue regristrado correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            MessageBox.Show("El viaje NO fue regristrado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     }
             }
@@ -85,13 +88,7 @@ namespace Compania_naviera.Presentacion.Operaciones.Viaje
 
         public void Btn_agregar_Click(object sender, EventArgs e)
         {
-            //var seleccionado = (int)cmb_tripulacion.SelectedValue;
-            //dgv_asignacion.Rows.Add(cmb_tripulacion.SelectedText);
-            //IList<Tripulacion> Tripulaciones = servicio.CargarTripulaciones(seleccionado);
-
             dgv_asignacion.Rows.Add(new object[] { cmb_tripulacion.SelectedItem.ToString() });
-            //dgv_asignacion.DataSource = servicio.CargarTripulaciones(seleccionado);
-
         }
     }
 }

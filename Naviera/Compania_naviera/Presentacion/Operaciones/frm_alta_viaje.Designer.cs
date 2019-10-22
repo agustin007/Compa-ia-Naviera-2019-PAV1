@@ -38,13 +38,13 @@
             this.cmb_itinerario = new System.Windows.Forms.ComboBox();
             this.txt_duracion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_viaje = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            this.colTripulante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_fecha = new System.Windows.Forms.MaskedTextBox();
+            this.legajo_tripulantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_asignacion)).BeginInit();
@@ -52,13 +52,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_fecha);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.dgv_asignacion);
             this.groupBox1.Controls.Add(this.cmb_navio);
             this.groupBox1.Controls.Add(this.cmb_itinerario);
             this.groupBox1.Controls.Add(this.txt_duracion);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txt_viaje);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -116,7 +116,7 @@
             this.dgv_asignacion.AllowUserToDeleteRows = false;
             this.dgv_asignacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_asignacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colTripulante});
+            this.legajo_tripulantes});
             this.dgv_asignacion.Location = new System.Drawing.Point(30, 193);
             this.dgv_asignacion.Name = "dgv_asignacion";
             this.dgv_asignacion.ReadOnly = true;
@@ -154,13 +154,6 @@
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Itinerario:";
-            // 
-            // txt_viaje
-            // 
-            this.txt_viaje.Location = new System.Drawing.Point(113, 30);
-            this.txt_viaje.Name = "txt_viaje";
-            this.txt_viaje.Size = new System.Drawing.Size(100, 20);
-            this.txt_viaje.TabIndex = 1;
             // 
             // label3
             // 
@@ -208,11 +201,19 @@
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
-            // colTripulante
+            // txt_fecha
             // 
-            this.colTripulante.HeaderText = "Tripulantes";
-            this.colTripulante.Name = "colTripulante";
-            this.colTripulante.ReadOnly = true;
+            this.txt_fecha.Location = new System.Drawing.Point(113, 30);
+            this.txt_fecha.Mask = "00/00/0000";
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.Size = new System.Drawing.Size(69, 20);
+            this.txt_fecha.TabIndex = 10;
+            // 
+            // legajo_tripulantes
+            // 
+            this.legajo_tripulantes.HeaderText = "Tripulantes";
+            this.legajo_tripulantes.Name = "legajo_tripulantes";
+            this.legajo_tripulantes.ReadOnly = true;
             // 
             // frm_alta_viaje
             // 
@@ -244,7 +245,6 @@
         private System.Windows.Forms.ComboBox cmb_itinerario;
         private System.Windows.Forms.TextBox txt_duracion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_viaje;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -255,6 +255,7 @@
         private System.Windows.Forms.DataGridView dgv_asignacion;
         private System.Windows.Forms.Button btn_aceptar;
         private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTripulante;
+        private System.Windows.Forms.MaskedTextBox txt_fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn legajo_tripulantes;
     }
 }

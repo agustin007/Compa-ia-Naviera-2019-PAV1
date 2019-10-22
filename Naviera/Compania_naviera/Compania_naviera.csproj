@@ -58,6 +58,7 @@
     <Compile Include="Acceso_a_datos\Dao\Interfaz\TripulacionDao.cs" />
     <Compile Include="Acceso_a_datos\Dao\Interfaz\ViajeDao.cs" />
     <Compile Include="Acceso_a_datos\Helper\DBHelper.cs" />
+    <Compile Include="Acceso_a_datos\Manager\DataManager.cs" />
     <Compile Include="Negocio\Entidades\ClasificacionNavio.cs" />
     <Compile Include="Negocio\Entidades\Itinerario.cs" />
     <Compile Include="Negocio\Entidades\Navio.cs" />
