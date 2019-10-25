@@ -77,23 +77,28 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             return lista;
         }
 
-        public bool RegistrerViaje(Viaje oViaje, List<int> listaLegajo)
+        public bool RegistrerViaje(Viaje oViaje)
         {
         
             DataManager dm = new DataManager();
             try
             {
+                dm.Open();
                 dm.BeginTransaction();
-                string sqlViaje = "INSERT INTO Viajes(fecha_viaje, duracion, FK_cod_navio, FK_cod_itinerario)" +
-                             "VALUES(" + oViaje.FechaViaje.ToString() + "," + oViaje.Duracion.ToString() +
-                             "," + oViaje.CodNavio.ToString() + "," + oViaje.CodItinerario.ToString() + ")";
+                string sqlViaje = " INSERT INTO Viajes(fecha_viaje, duracion, FK_cod_navio, FK_cod_itinerario) " +
+                             " VALUES('" + oViaje.FechaViaje.ToString("dd/MM/yyyy") + "'," + oViaje.Duracion.ToString() +
+                             "," + oViaje.Navio.Codigo.ToString() + "," + oViaje.Itinerario.Codigo.ToString() + ")";
+                var parametros = new Dictionary<string, object>();
 
                 dm.EjecutarSQL(sqlViaje);
 
-                foreach (int legajo in listaLegajo)
+                var idDelViaje = dm.ConsultaSQLScalar("SELECT @@IDENTITY");
+                oViaje.IdViaje = Convert.ToInt32(idDelViaje);
+
+                foreach (Tripulacion tripulacion in oViaje.TripulacionAsignada)
                 {
                     string sqlAsignacion = "INSERT INTO Tripulante_x_viaje(id_viaje,legajo)" +
-                                           "VALUES(" + oViaje.IdViaje.ToString() + "," + legajo.ToString() + ");";
+                                           "VALUES(" + oViaje.IdViaje.ToString() + "," + tripulacion.Legajo.ToString() + ");";
                 }
                 dm.Commit();
             }

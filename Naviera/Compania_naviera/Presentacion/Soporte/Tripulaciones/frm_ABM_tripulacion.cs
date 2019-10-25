@@ -67,7 +67,7 @@ namespace Compania_naviera.Presentacion.Soporte
         {
             txt_legajo.Text = oTripulacionSeleccionada.Legajo.ToString();
             txt_nombre.Text = oTripulacionSeleccionada.Nombre.ToString();
-            cmb_puesto.Text = oTripulacionSeleccionada.CodPuesto.Descripcion.ToString();
+            cmb_puesto.Text = oTripulacionSeleccionada.Puesto.Descripcion.ToString();
             return oTripulacionSeleccionada;
         }
 
@@ -80,8 +80,8 @@ namespace Compania_naviera.Presentacion.Soporte
                         Tripulacion oTripulacion = new Tripulacion();
                         oTripulacion.Legajo = Convert.ToInt32(txt_legajo.Text);
                         oTripulacion.Nombre = txt_nombre.Text;
-                        oTripulacion.CodPuesto = new Puestos();
-                        oTripulacion.CodPuesto.CodPuesto = (int)cmb_puesto.SelectedValue;
+                        oTripulacion.Puesto = new Puestos();
+                        oTripulacion.Puesto.CodPuesto = (int)cmb_puesto.SelectedValue;
                         if(txt_legajo.Text != "")
                         {
                             if (servicio.RegistrarTripulacion(oTripulacion))
@@ -102,8 +102,8 @@ namespace Compania_naviera.Presentacion.Soporte
                     {
                         oTripulacionSeleccionada.Legajo = Convert.ToInt32(txt_legajo.Text);
                         oTripulacionSeleccionada.Nombre = txt_nombre.Text;
-                        oTripulacionSeleccionada.CodPuesto = new Puestos();
-                        oTripulacionSeleccionada.CodPuesto.CodPuesto = (int)cmb_puesto.SelectedValue;
+                        oTripulacionSeleccionada.Puesto = new Puestos();
+                        oTripulacionSeleccionada.Puesto.CodPuesto = (int)cmb_puesto.SelectedValue;
                         if (txt_nombre.Text != "")
                         {
                             if (servicio.ModificarTripulacion(oTripulacionSeleccionada))

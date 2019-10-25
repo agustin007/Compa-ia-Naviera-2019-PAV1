@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -187,9 +188,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Negocio\Tripulaciones\" />
-    <Folder Include="Presentacion\Operaciones\Viajes\" />
-    <Folder Include="Presentacion\Operaciones\Viaje\" />
+    <Folder Include="Negocio\Tripulaciones\Vi\Viajes\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\botones\boton_buscar.png" />

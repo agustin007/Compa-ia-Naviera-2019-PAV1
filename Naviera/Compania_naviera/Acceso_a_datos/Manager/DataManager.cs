@@ -149,9 +149,12 @@ public class DataManager
             cmd.CommandText = strSql;
 
             //Agregamos a la colección de parámetros del comando los filtros recibidos
-            foreach (var item in parametros)
+            if(parametros != null)
             {
-                cmd.Parameters.AddWithValue(item.Key, item.Value);
+                foreach (var item in parametros)
+                {
+                    cmd.Parameters.AddWithValue(item.Key, item.Value);
+                }
             }
 
 

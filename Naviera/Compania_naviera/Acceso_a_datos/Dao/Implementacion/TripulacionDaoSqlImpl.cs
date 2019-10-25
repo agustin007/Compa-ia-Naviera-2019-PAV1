@@ -88,7 +88,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             var parametros = new Dictionary<string, object>();
             parametros.Add("@Legajo", oTripulacion.Legajo);
             parametros.Add("@Nombre", oTripulacion.Nombre);
-            parametros.Add("@Puesto", oTripulacion.CodPuesto.CodPuesto);
+            parametros.Add("@Puesto", oTripulacion.Puesto.CodPuesto);
 
             return DBHelper.getDBHelper().EjecutarSQL(sql, parametros) == 1;
         }
@@ -104,7 +104,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
             var parametros = new Dictionary<string, object>();
             parametros.Add("@Legajo", oTripulacionSeleccionada.Legajo);
             parametros.Add("@Nombre", oTripulacionSeleccionada.Nombre);
-            parametros.Add("@Puesto", oTripulacionSeleccionada.CodPuesto.CodPuesto);
+            parametros.Add("@Puesto", oTripulacionSeleccionada.Puesto.CodPuesto);
             parametros.Add("@Estado", oTripulacionSeleccionada.Estado);
 
             return DBHelper.getDBHelper().EjecutarSQL(sql, parametros) == 1;
@@ -117,7 +117,7 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Implementacion
                 oTripulacion.Legajo = Convert.ToInt32(row["legajo"].ToString());
                 oTripulacion.Nombre = row["nombre"].ToString();
                 //oTripulacion.LegajoJefe = Convert.ToInt32(row["FK_legajo_jefe"].ToString());
-                oTripulacion.CodPuesto = new Puestos()
+                oTripulacion.Puesto = new Puestos()
                 {
                     CodPuesto = Convert.ToInt32(row["FK_cod_puesto"].ToString()),
                     Descripcion = row["descripcion"].ToString()

@@ -1,4 +1,4 @@
-﻿namespace Compania_naviera.Presentacion.Operaciones.Viaje
+﻿namespace Compania_naviera.Presentacion.Operaciones
 {
     partial class frm_alta_viaje
     {
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_fecha = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_agregar = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            this.txt_fecha = new System.Windows.Forms.MaskedTextBox();
             this.legajo_tripulantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,6 +68,14 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Viaje";
+            // 
+            // txt_fecha
+            // 
+            this.txt_fecha.Location = new System.Drawing.Point(113, 30);
+            this.txt_fecha.Mask = "00/00/0000";
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.Size = new System.Drawing.Size(69, 20);
+            this.txt_fecha.TabIndex = 10;
             // 
             // groupBox2
             // 
@@ -201,16 +209,9 @@
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
-            // txt_fecha
-            // 
-            this.txt_fecha.Location = new System.Drawing.Point(113, 30);
-            this.txt_fecha.Mask = "00/00/0000";
-            this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(69, 20);
-            this.txt_fecha.TabIndex = 10;
-            // 
             // legajo_tripulantes
             // 
+            this.legajo_tripulantes.DataPropertyName = "Nombre";
             this.legajo_tripulantes.HeaderText = "Tripulantes";
             this.legajo_tripulantes.Name = "legajo_tripulantes";
             this.legajo_tripulantes.ReadOnly = true;

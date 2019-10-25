@@ -11,8 +11,8 @@ namespace Compania_naviera.Negocio.Entidades
         public int IdViaje { get; set; }
         public DateTime FechaViaje { get; set; }
         public int Duracion { get; set; }
-        public Navio CodNavio { get; set; }
-        public Itinerario CodItinerario { get; set; }
+        public Navio Navio { get; set; }
+        public Itinerario Itinerario { get; set; }
         public IList<Tripulacion> TripulacionAsignada { get; set; }
         public Viaje() { }
 
