@@ -149,14 +149,12 @@ public class DataManager
             cmd.CommandText = strSql;
 
             //Agregamos a la colección de parámetros del comando los filtros recibidos
-            if(parametros != null)
+        
+            foreach (var item in parametros)
             {
-                foreach (var item in parametros)
-                {
-                    cmd.Parameters.AddWithValue(item.Key, item.Value);
-                }
+                cmd.Parameters.AddWithValue(item.Key, item.Value);
             }
-
+           
 
             // Retorna el resultado de ejecutar el comando
             rtdo = cmd.ExecuteNonQuery();

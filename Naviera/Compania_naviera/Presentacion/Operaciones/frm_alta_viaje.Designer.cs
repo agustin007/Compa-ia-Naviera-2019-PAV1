@@ -35,6 +35,7 @@
             this.btn_agregar = new System.Windows.Forms.Button();
             this.cmb_tripulacion = new System.Windows.Forms.ComboBox();
             this.dgv_asignacion = new System.Windows.Forms.DataGridView();
+            this.legajo_tripulantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmb_navio = new System.Windows.Forms.ComboBox();
             this.cmb_itinerario = new System.Windows.Forms.ComboBox();
             this.txt_duracion = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            this.legajo_tripulantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_asignacion)).BeginInit();
@@ -122,6 +122,7 @@
             // 
             this.dgv_asignacion.AllowUserToAddRows = false;
             this.dgv_asignacion.AllowUserToDeleteRows = false;
+            this.dgv_asignacion.AllowUserToOrderColumns = true;
             this.dgv_asignacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_asignacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.legajo_tripulantes});
@@ -130,6 +131,13 @@
             this.dgv_asignacion.ReadOnly = true;
             this.dgv_asignacion.Size = new System.Drawing.Size(376, 131);
             this.dgv_asignacion.TabIndex = 8;
+            // 
+            // legajo_tripulantes
+            // 
+            this.legajo_tripulantes.DataPropertyName = "Nombre";
+            this.legajo_tripulantes.HeaderText = "Tripulantes";
+            this.legajo_tripulantes.Name = "legajo_tripulantes";
+            this.legajo_tripulantes.ReadOnly = true;
             // 
             // cmb_navio
             // 
@@ -208,13 +216,6 @@
             this.btn_cancelar.TabIndex = 11;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
-            // 
-            // legajo_tripulantes
-            // 
-            this.legajo_tripulantes.DataPropertyName = "Nombre";
-            this.legajo_tripulantes.HeaderText = "Tripulantes";
-            this.legajo_tripulantes.Name = "legajo_tripulantes";
-            this.legajo_tripulantes.ReadOnly = true;
             // 
             // frm_alta_viaje
             // 

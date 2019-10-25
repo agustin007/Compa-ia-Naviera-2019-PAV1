@@ -13,5 +13,6 @@ namespace Compania_naviera.Acceso_a_datos.Dao.Interfaz
         IList<Tripulacion> GetTripulaciones();
         IList<Tripulacion> GetCargarTripulacion(int seleccionado);
         bool RegistrerViaje(Viaje oViaje);
+        IList<Viaje> ObtainViaje(Dictionary<string, object> parametros);
     }
 }

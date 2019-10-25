@@ -42,7 +42,7 @@ namespace Compania_naviera.Presentacion.Operaciones.Viaje
             }
             if(parametros.Count > 0)
             {
-                dgv_viajes.DataSource = "";
+                dgv_viajes.DataSource = servicio.ObtenerViaje(parametros);
             }
         }
 

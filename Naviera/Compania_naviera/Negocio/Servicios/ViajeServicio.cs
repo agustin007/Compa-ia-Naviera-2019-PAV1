@@ -42,5 +42,10 @@ namespace Compania_naviera.Negocio.Servicios
         {
             return dao.RegistrerViaje(oViaje);
         }
+
+        public IList<Viaje>ObtenerViaje(Dictionary<string, object> parametros)
+        {
+            return dao.ObtainViaje(parametros);
+        }
     }
 }
